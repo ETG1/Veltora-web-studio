@@ -1,0 +1,181 @@
+export const packages = [
+  {
+    tier:        'Forge',
+    tagline:     'Your business, online in days.',
+    setupFee:    'R3,500',
+    monthly:     'R600/mo',
+    highlighted: false,
+    features: [
+      '1–4 page website',
+      'Mobile responsive',
+      'Basic SEO setup',
+      'Contact form',
+      'Domain & hosting setup',
+      'WhatsApp integration',
+      '1 round of revisions',
+      'Delivery in 5–7 days',
+    ],
+    cta: 'Get started',
+  },
+  {
+    tier:        'Velocity',
+    tagline:     'Built to grow with you.',
+    setupFee:    'R6,500',
+    monthly:     'R900/mo',
+    highlighted: true,
+    features: [
+      '4–6 page website',
+      'Custom layout design',
+      'Mobile optimisation',
+      'Advanced SEO setup',
+      'WhatsApp integration',
+      'Speed optimisation',
+      'Google Analytics setup',
+      '2 rounds of revisions',
+      'Delivery in 10–14 days',
+    ],
+    cta: 'Most popular',
+  },
+  {
+    tier:        'Apex',
+    tagline:     "Your brand's most powerful asset.",
+    setupFee:    'R12,000',
+    monthly:     'R1,200/mo',
+    highlighted: false,
+    features: [
+      'Unlimited pages',
+      'Full custom design system',
+      'Authentication & user accounts',
+      'Database integration',
+      'Admin dashboard',
+      'E-commerce ready',
+      'Performance audit',
+      '3 rounds of revisions',
+      'Priority support',
+      'Delivery in 21–28 days',
+    ],
+    cta: 'Go premium',
+  },
+]
+
+export const techStack = [
+  'Next.js', 'React', 'TypeScript', 'Tailwind CSS',
+  'Supabase', 'Vercel', 'Figma', 'Framer Motion',
+]
+
+export const projects = [
+  {
+    id: 1,
+    name: 'Eagle Air Flight School',
+    category: 'Education',
+    year: '2024',
+    url: 'https://eagle-air-flight-school.vercel.app/',
+    description: 'Full aviation school website with course listings and enquiry system.',
+    size: 'large',
+  },
+  {
+    id: 2,
+    name: 'ELI Two',
+    category: 'Business',
+    year: '2024',
+    url: 'https://eli-two.vercel.app/',
+    description: 'Clean business website with modern layout.',
+    size: 'medium',
+  },
+  {
+    id: 3,
+    name: "Shisho's Code Dojo",
+    category: 'Education',
+    year: '2024',
+    url: 'https://shisho-s-code-dojo.vercel.app/',
+    description: 'Coding education platform with course structure.',
+    size: 'medium',
+  },
+  {
+    id: 4,
+    name: 'Tennis Whisperer',
+    category: 'Sports',
+    year: '2024',
+    url: 'https://tenniswhisperer.vercel.app/',
+    description: 'Coaching and booking platform for tennis professionals.',
+    size: 'large',
+  },
+  {
+    id: 5,
+    name: 'TOGB Agency',
+    category: 'Agency',
+    year: '2024',
+    url: 'https://togb-agency.vercel.app/',
+    description: 'Multi-service agency with portfolio showcase.',
+    size: 'medium',
+  },
+  {
+    id: 6,
+    name: 'Hotel Nine',
+    category: 'Hospitality',
+    year: '2024',
+    url: 'https://hotel-nine-omega.vercel.app/',
+    description: 'Boutique hotel website with room showcase and booking.',
+    size: 'large',
+  },
+  {
+    id: 7,
+    name: 'Tabernacle of Grace',
+    category: 'Community',
+    year: '2024',
+    url: 'https://tabernacle-of-grace-fellowship.vercel.app/',
+    description: 'Church fellowship website with events and sermons.',
+    size: 'medium',
+  },
+  {
+    id: 8,
+    name: 'LM Motors',
+    category: 'Automotive',
+    year: '2024',
+    url: 'https://lm-motors.vercel.app/',
+    description: 'Vehicle dealership with inventory listings.',
+    size: 'medium',
+  },
+  {
+    id: 9,
+    name: 'Takalani Day Care',
+    category: 'Education',
+    year: '2024',
+    url: 'https://takalani-day-care-center.vercel.app/',
+    description: 'Warm, welcoming day care centre website.',
+    size: 'medium',
+  },
+]
+
+export const process = [
+  {
+    step:  '01',
+    title: 'Discovery',
+    body:  'We start with a conversation — your goals, your customers, your deadline. One call is usually enough.',
+  },
+  {
+    step:  '02',
+    title: 'Design',
+    body:  'I design the full layout in Figma before a single line of code. You see exactly what you\'re getting.',
+  },
+  {
+    step:  '03',
+    title: 'Build',
+    body:  'Clean, fast, modern code. Next.js for performance. Tailwind for precision. Supabase when you need a backend.',
+  },
+  {
+    step:  '04',
+    title: 'Launch',
+    body:  'Your site goes live on Vercel — global CDN, instant deployments, 99.9% uptime. We handle the technical side.',
+  },
+]
+
+export const testimonials = [
+  {
+    quote:   "Working with Veltora felt different. Fast, professional, and the final product looked better than I imagined.",
+    name:    "Client Name",
+    company: "Company, South Africa",
+    stars:   5,
+  },
+  // Add real testimonials as they come in
+]
