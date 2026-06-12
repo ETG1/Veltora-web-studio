@@ -1,100 +1,76 @@
-import Link from 'next/link'
+'use client'
+
+import { motion } from 'framer-motion'
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
-
   return (
-    <footer className="relative bg-[#080808] border-t border-border/30 pt-20 pb-8 px-6 overflow-hidden">
-      
-      {/* Background Watermark */}
-      <div 
-        className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 font-display select-none pointer-events-none whitespace-nowrap"
-        style={{ fontSize: 'clamp(8rem, 20vw, 25rem)', lineHeight: 0.8, opacity: 0.015, color: '#E8A020' }}
-        aria-hidden="true"
-      >
-        VELTORA
+    <footer className="bg-dark border-t border-white/5 pt-40 pb-20 px-8 md:px-24 overflow-hidden relative">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 select-none pointer-events-none opacity-[0.05]">
+        <span className="font-display text-[25vw] leading-none tracking-tighter uppercase font-bold text-white">Veltora</span>
       </div>
 
-      <div className="max-w-[1200px] mx-auto relative z-10">
-        
-        {/* Top Section - 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-20">
-          
-          {/* Column 1: Logo & Tagline */}
-          <div className="flex flex-col">
-            <Link href="/" className="mb-6 inline-block">
-              <span className="font-display text-2xl font-light tracking-[0.15em] text-text-primary">
-                <span className="text-gold">V</span>ELTORA
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 mb-40">
+          <div className="lg:col-span-5 space-y-12">
+            <div className="flex items-center gap-2">
+              <span className="font-display text-4xl tracking-[0.2em] font-light text-white uppercase">
+                <span className="text-gold-deep">V</span>eltora
               </span>
-            </Link>
-            <p className="text-text-secondary font-light text-sm max-w-xs mb-8">
-              Precision-built digital experiences. We design and build high-performance websites for businesses that want to stand out.
+            </div>
+            <p className="text-white/40 text-xl font-light leading-relaxed max-w-sm">
+              Crafting precision-built digital experiences for the next generation of industry leaders.
             </p>
-            <p className="text-text-muted text-xs font-mono mt-auto">
-              © {currentYear} Veltora Web Studio. All rights reserved.
-            </p>
-          </div>
-
-          {/* Column 2: Navigation */}
-          <div className="flex flex-col">
-            <h4 className="text-text-primary font-medium mb-6">Navigation</h4>
-            <ul className="space-y-4">
-              {['Work', 'Services', 'About', 'Process', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link 
-                    href={`#${item.toLowerCase()}`}
-                    className="text-text-secondary hover:text-gold transition-colors text-sm font-light"
-                  >
-                    {item}
-                  </Link>
-                </li>
+            <div className="flex gap-8">
+              {[
+                { icon: 'fa-instagram', href: '#' },
+                { icon: 'fa-linkedin-in', href: '#' },
+                { icon: 'fa-x-twitter', href: '#' },
+              ].map((social, i) => (
+                <a key={i} href={social.href} className="text-white/30 hover:text-gold-deep transition-colors text-2xl">
+                  <i className={`fa-brands ${social.icon}`}></i>
+                </a>
               ))}
-            </ul>
+            </div>
           </div>
 
-          {/* Column 3: Social & Tech */}
-          <div className="flex flex-col">
-            <h4 className="text-text-primary font-medium mb-6">Connect</h4>
-            <ul className="space-y-4 mb-8">
-              <li>
-                <a href="#" className="text-text-secondary hover:text-gold transition-colors text-sm font-light">
-                  Twitter / X ↗
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-text-secondary hover:text-gold transition-colors text-sm font-light">
-                  LinkedIn ↗
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-text-secondary hover:text-gold transition-colors text-sm font-light">
-                  Instagram ↗
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-text-secondary hover:text-gold transition-colors text-sm font-light">
-                  GitHub ↗
-                </a>
-              </li>
-            </ul>
-            <p className="text-text-muted text-xs font-mono mt-auto">
-              Built with Next.js & ☕
-            </p>
+          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-16">
+            <div className="space-y-8">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-white/20">Studio</p>
+              <ul className="space-y-4 font-display text-lg text-white/60">
+                <li><a href="#" className="hover:text-gold-deep transition-colors">The Lab</a></li>
+                <li><a href="#" className="hover:text-gold-deep transition-colors">Manifesto</a></li>
+                <li><a href="#" className="hover:text-gold-deep transition-colors">Work</a></li>
+                <li><a href="#" className="hover:text-gold-deep transition-colors">Archive</a></li>
+              </ul>
+            </div>
+            <div className="space-y-8">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-white/20">Services</p>
+              <ul className="space-y-4 font-display text-lg text-white/60">
+                <li><a href="#" className="hover:text-gold-deep transition-colors">Engineering</a></li>
+                <li><a href="#" className="hover:text-gold-deep transition-colors">UI Design</a></li>
+                <li><a href="#" className="hover:text-gold-deep transition-colors">Branding</a></li>
+                <li><a href="#" className="hover:text-gold-deep transition-colors">Strategy</a></li>
+              </ul>
+            </div>
+            <div className="space-y-8 col-span-2 md:col-span-1">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-white/20">Connect</p>
+              <ul className="space-y-4 font-display text-lg text-white/60">
+                <li><a href="#" className="hover:text-gold-deep transition-colors italic">Inquiry System</a></li>
+                <li className="text-white/30 font-light text-sm">Pretoria, South Africa</li>
+                <li className="text-white/30 font-light text-sm">+27 (0) 72 455 1290</li>
+              </ul>
+            </div>
           </div>
-
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-border/50 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-text-muted text-xs flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold inline-block animate-pulse" />
-            Operating from Pretoria, South Africa
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 sm:pt- border-t border-white/5 gap-8">
+          <p className="font-mono text-[8px] uppercase tracking-widest text-white/20 italic">
+            Precision built in Pretoria
           </p>
-          <p className="section-label" style={{fontSize: '0.65rem'}}>
-            Proudly Pan-African
+          <p className="font-mono text-[9px] uppercase tracking-widest text-white/40">
+            © {new Date().getFullYear()} Veltora Web Studio — All Rights Reserved.
           </p>
         </div>
-
       </div>
     </footer>
   )

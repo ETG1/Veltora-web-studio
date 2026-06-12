@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://veltora.co.za'),
   title: 'Veltora Web Studio — Precision-built digital experiences',
   description: 'We design and build high-performance websites for businesses that want to stand out. Fast websites. Real results.',
   keywords: ['web design', 'web development', 'South Africa', 'Kenya', 'Next.js', 'Veltora'],
@@ -32,11 +33,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <link rel="preload" href="/hero-cinematic.jpeg" as="image" fetchPriority="high" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <Cursor />
         <Navbar />
         {children}

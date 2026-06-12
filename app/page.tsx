@@ -1,21 +1,27 @@
+import CinematicIntro from '@/components/sections/CinematicIntro'
+import CoreRigor from '@/components/sections/CoreRigor'
+import Architecture from '@/components/sections/Architecture'
+import Performance from '@/components/sections/Performance'
+import Philosophy from '@/components/sections/Philosophy'
+import WorksArchive from '@/components/sections/WorksArchive'
+import Methodology from '@/components/sections/Methodology'
+import ProjectTransmission from '@/components/sections/ProjectTransmission'
 import Hero from '@/components/sections/Hero'
-import Services from '@/components/sections/Services'
-import Portfolio from '@/components/sections/Portfolio'
-import About from '@/components/sections/About'
-import Process from '@/components/sections/Process'
-import Testimonials from '@/components/sections/Testimonials'
-import Contact from '@/components/sections/Contact'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main className="flex min-h-screen flex-col relative">
+      {/* Cinematic Intro — contains Hero internally. On mobile renders Hero directly. */}
+      {/* <CinematicIntro /> */}
+      {/* Variant 5 — Master Assembly section order */}
       <Hero />
-      <Services />
-      <Portfolio />
-      <About />
-      <Process />
-      <Testimonials />
-      <Contact />
+      <Philosophy />
+      <CoreRigor />
+      <WorksArchive />
+      <Performance />
+      <Methodology />
+      <Architecture />
+      <ProjectTransmission />
     </main>
   )
 }

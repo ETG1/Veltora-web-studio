@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3 3 28 42">
+  <title>Veltora — icon mark</title>
+    <polygon points="3.0,4.0 12.2,4.0 16.8,44.0" fill="#E8A020"/>
+    <polygon points="30.7,4.0 21.5,4.0 19.9,14.8 26.6,14.8" fill="#E8A020"/>
+    <polygon points="26.6,14.8 19.9,14.8 19.4,18.4 25.6,18.4" fill="transparent"/>
+    <polygon points="25.6,18.4 19.4,18.4 17.9,30.2 21.5,30.2" fill="#E8A020"/>
+    <polygon points="21.5,30.2 17.9,30.2 17.4,33.7 20.4,33.7" fill="transparent"/>
+    <polygon points="20.4,33.7 17.4,33.7 16.8,44.0" fill="#C47810"/>
+</svg>

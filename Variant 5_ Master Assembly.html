@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="kombai-design-canvas" content="true">
+  <base href="http://localhost:19536/">
+  
+  <meta charset="UTF-8">
+    <title>Veltora — Master Assembly</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+  <style>html, body { margin: 0; padding: 0; } #root { display: contents; }</style>
+</head><body class="bg-[var(--dark)]">
+  <div id="root"><style data-kid="0">
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+        :root {
+            --gold: #E8A020;
+            --gold-deep: #C47810;
+            --dark: #080808;
+            --charcoal: #111111;
+            --light: #FBFCFD;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --hairline-gold: rgba(196, 120, 16, 0.22);
+        }
+
+        .font-display { font-family: 'Cormorant Garamond', serif; }
+        .font-body { font-family: 'DM Sans', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .grain-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.3;
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 40px rgba(196, 120, 16, 0.12);
+        }
+
+        .gold-wash {
+            background: linear-gradient(135deg, rgba(196, 120, 16, 0.08) 0%, transparent 100%);
+        }
+
+        .transition-premium {
+            transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hairline-gold-border {
+            border: 1px solid var(--hairline-gold);
+        }
+
+        .text-glow-gold {
+            text-shadow: 0 0 20px rgba(232, 160, 32, 0.3);
+        }
+    </style>
+
+<div class="font-body text-[#F5F5F5] bg-[var(--dark)] selection:bg-[var(--gold)]/30 overflow-x-hidden relative" data-kid="1">
+    <div class="grain-overlay" data-kid="2"></div>
+
+    
+    <nav class="absolute top-0 left-0 right-0 z-[100] flex items-center justify-between px-8 md:px-16 py-10" data-kid="3">
+        <div class="flex items-center gap-2" data-kid="4">
+            <span class="font-display text-2xl tracking-[0.25em] font-light text-white uppercase" data-kid="5">
+                <span class="text-[var(--gold)]" data-kid="6">V</span>eltora
+            </span>
+        </div>
+        <div class="hidden lg:flex items-center gap-12 font-mono text-[10px] uppercase tracking-[0.3em] text-white/60" data-kid="7">
+            <a href="javascript:void(0)" class="hover:text-[var(--gold)] transition-colors" data-kid="8">Portfolio</a>
+            <a href="javascript:void(0)" class="hover:text-[var(--gold)] transition-colors" data-kid="9">Services</a>
+            <a href="javascript:void(0)" class="hover:text-[var(--gold)] transition-colors" data-kid="10">Process</a>
+            <a href="javascript:void(0)" class="px-6 py-2 border border-[var(--gold)]/30 rounded-full hover:bg-[var(--gold)] hover:text-[var(--dark)] transition-all text-white" data-kid="11">Start Project</a>
+        </div>
+    </nav>
+
+    
+    <section class="relative h-[900px] flex items-center justify-center overflow-hidden" data-kid="12">
+        <div class="absolute inset-0 z-0" data-kid="13">
+            <img src="https://images.pexels.com/photos/6141905/pexels-photo-6141905.jpeg?auto=compress&cs=tinysrgb&w=1920&q=85" alt="Gold Texture" class="w-full h-full object-cover opacity-40 mix-blend-screen scale-105" decoding="async" loading="lazy" data-kid="14">
+            <div class="absolute inset-0 bg-gradient-to-b from-[var(--dark)] via-transparent to-[var(--dark)]" data-kid="15"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[var(--dark)] via-transparent to-[var(--dark)] opacity-60" data-kid="16"></div>
+            <div class="absolute inset-0 bg-[var(--dark)]/40" data-kid="17"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6" data-kid="18">
+            <div class="inline-block mb-10 overflow-hidden" data-kid="19">
+                <p class="font-mono text-[var(--gold)] text-[11px] tracking-[0.5em] uppercase opacity-90 animate-pulse" data-kid="20">Engineering Premium Digital Architecture</p>
+            </div>
+            <h1 class="font-display text-[clamp(4.5rem,11vw,9rem)] leading-[0.85] font-light mb-14 flex flex-col items-center" data-kid="21">
+                <span class="text-white drop-shadow-2xl" data-kid="22">Precision-built</span>
+                <span class="gold-gradient-text italic font-normal text-glow-gold" data-kid="23">digital experiences</span>
+            </h1>
+            <div class="flex flex-col items-center gap-6" data-kid="24">
+                <p class="text-white/60 max-w-lg text-lg font-light leading-relaxed" data-kid="25">
+                    Crafting high-performance digital ecosystems with cinematic aesthetics and architectural precision.
+                </p>
+                <div class="mt-4 flex items-center gap-12 border-t border-white/10 pt-10" data-kid="26">
+                    <div class="text-center" data-kid="27">
+                        <span class="block font-display text-3xl text-[var(--gold)]" data-kid="28">8+</span>
+                        <span class="block text-[8px] font-mono tracking-widest uppercase text-white/40 mt-1" data-kid="29">Global Clients</span>
+                    </div>
+                    <div class="h-10 w-px bg-white/10" data-kid="30"></div>
+                    <div class="text-center" data-kid="31">
+                        <span class="block font-display text-3xl text-[var(--gold)]" data-kid="32">100%</span>
+                        <span class="block text-[8px] font-mono tracking-widest uppercase text-white/40 mt-1" data-kid="33">Delivery rate</span>
+                    </div>
+                    <div class="h-10 w-px bg-white/10" data-kid="34"></div>
+                    <div class="text-center" data-kid="35">
+                        <span class="block font-display text-3xl text-[var(--gold)]" data-kid="36">&lt;2s</span>
+                        <span class="block text-[8px] font-mono tracking-widest uppercase text-white/40 mt-1" data-kid="37">Load performance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4" data-kid="38">
+            <span class="text-[8px] font-mono tracking-[0.3em] uppercase text-white/30" data-kid="39">Scroll</span>
+            <div class="w-px h-16 bg-gradient-to-b from-[var(--gold)] to-transparent" data-kid="40"></div>
+        </div>
+    </section>
+
+    
+    <section class="py-40 px-8 md:px-24 bg-[#080808] border-t border-white/5" data-kid="41">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center" data-kid="42">
+            <div data-kid="43">
+                <span class="text-[10px] font-mono tracking-[0.3em] text-[#C47810] block mb-6" data-kid="44">01 — CORE RIGOR</span>
+                <h2 class="font-display text-5xl md:text-6xl font-light leading-tight mb-8" data-kid="45">
+                    The intersection of <br data-kid="46">
+                    <span class="italic" data-kid="47">art & arithmetic.</span>
+                </h2>
+                <p class="text-white/60 text-lg font-light leading-relaxed mb-10 max-w-xl" data-kid="48">
+                    Our approach transcends mere aesthetic. We write lean, performant code that honors the design intent while pushing the boundaries of what is possible on the modern web.
+                </p>
+                <div class="grid grid-cols-2 gap-8" data-kid="49">
+                    <div data-kid="50">
+                        <h4 class="font-mono text-[10px] tracking-widest text-white mb-2 uppercase" data-kid="51">Performance</h4>
+                        <p class="text-sm text-white/40" data-kid="52">Sub-200ms interactions and flawless LCP scores.</p>
+                    </div>
+                    <div data-kid="53">
+                        <h4 class="font-mono text-[10px] tracking-widest text-white mb-2 uppercase" data-kid="54">Scalability</h4>
+                        <p class="text-sm text-white/40" data-kid="55">Systems built to evolve with your project roadmap.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8 relative" data-kid="56">
+                <div class="absolute -left-12 top-1/2 -translate-y-1/2 w-px h-64 bg-linear-to-b from-transparent via-[#C47810]/30 to-transparent" data-kid="57"></div>
+
+                <div class="glass-card rounded-2xl p-8 transform rotate-1 gold-glow relative overflow-hidden group transition-premium hover:rotate-0" data-kid="58">
+                    <div class="absolute inset-0 gold-wash opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-kid="59"></div>
+                    <div class="relative z-10 font-mono" data-kid="60">
+                        <div class="flex items-center justify-between mb-8" data-kid="61">
+                            <div class="flex gap-2" data-kid="62">
+                                <div class="w-2.5 h-2.5 rounded-full bg-[#C47810]/40" data-kid="63"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-white/10" data-kid="64"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-white/10" data-kid="65"></div>
+                            </div>
+                            <span class="text-[9px] text-white/30 tracking-widest uppercase" data-kid="66">main.ts</span>
+                        </div>
+                        <pre class="text-[11px] text-white/60 leading-loose" data-kid="67"><span class="text-[#C47810]">import</span> { <span class="text-white">Craft</span> } <span class="text-[#C47810]">from</span> <span class="text-white">'@veltora/core'</span>;
+
+<span class="text-[#C47810]">export default</span> <span class="text-white">Craft</span>({
+  aesthetic: <span class="text-white">'Cinematic'</span>,
+  rigor: <span class="text-white">true</span>,
+  output: () =&gt; <span class="text-white">'Excellence'</span>
+});</pre>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-10 transform -rotate-2 gold-glow relative overflow-hidden group transition-premium hover:rotate-0" data-kid="68">
+                    <div class="absolute inset-0 gold-wash opacity-0 group-hover:opacity-100 transition-opacity duration-300" data-kid="69"></div>
+                    <div class="relative z-10 flex justify-between items-center" data-kid="70">
+                        <div data-kid="71">
+                            <span class="font-mono text-[10px] tracking-[0.3em] text-[#C47810] block mb-2" data-kid="72">FIDELITY INDEX</span>
+                            <span class="text-5xl font-display italic font-light" data-kid="73">99.8<span class="text-xl non-italic ml-1 opacity-40" data-kid="74">%</span></span>
+                        </div>
+                        <div class="relative w-24 h-24 flex items-center justify-center" data-kid="75">
+                            <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 100 100" data-kid="76"></svg>
+                            <div class="font-mono text-[10px] text-[#C47810] font-bold" data-kid="79">PRO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="bg-[#080808] py-48 px-8 md:px-24 border-t border-white/5 relative overflow-hidden" data-kid="80">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#C47810]/5 blur-[120px] rounded-full pointer-events-none opacity-40" data-kid="81"></div>
+        <div class="max-w-7xl mx-auto" data-kid="82">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8" data-kid="83">
+                <div class="max-w-2xl" data-kid="84">
+                    <p class="font-mono text-[#C47810] uppercase tracking-[0.4em] text-[10px] mb-6" data-kid="85">02 — Architecture</p>
+                    <h2 class="font-display text-5xl md:text-7xl text-white font-light leading-tight" data-kid="86">
+                        Proprietary <br data-kid="87">
+                        <span class="italic text-white/40" data-kid="88">Foundations.</span>
+                    </h2>
+                </div>
+                <div class="md:max-w-xs" data-kid="89">
+                    <p class="text-white/50 text-sm leading-relaxed font-light" data-kid="90">
+                        Every project is built with proprietary performance standards and conversion-led design principles. Technical excellence, mandated.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10" data-kid="91">
+                <div class="p-12 glass-card hairline-gold-border rounded-2xl flex flex-col justify-between group transition-premium hover:translate-y-[-8px] gold-glow relative" data-kid="92">
+                    <div class="absolute inset-0 gold-wash opacity-0 group-hover:opacity-100 transition-opacity" data-kid="93"></div>
+                    <div class="relative z-10" data-kid="94">
+                        <span class="font-mono text-[9px] uppercase tracking-widest text-[#C47810] mb-8 block" data-kid="95">01 / Foundation</span>
+                        <h3 class="font-display text-4xl text-white mb-6 font-light" data-kid="96">Forge</h3>
+                        <p class="text-white/50 text-sm mb-10 leading-relaxed font-light" data-kid="97">Rapid deployment architecture for emerging brands requiring immediate prestige.</p>
+                        <ul class="space-y-4 mb-12" data-kid="98">
+                            <li class="flex items-center gap-3 text-xs text-white/60 font-light" data-kid="99">
+                                <span class="w-1 h-1 rounded-full bg-[#C47810]" data-kid="100"></span> 4-Page Architecture
+                            </li>
+                            <li class="flex items-center gap-3 text-xs text-white/60 font-light" data-kid="101">
+                                <span class="w-1 h-1 rounded-full bg-[#C47810]" data-kid="102"></span> Mobile Responsive
+                            </li>
+                            <li class="flex items-center gap-3 text-xs text-white/60 font-light" data-kid="103">
+                                <span class="w-1 h-1 rounded-full bg-[#C47810]" data-kid="104"></span> Standard SEO
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-4 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest text-white/60 hover:bg-[#C47810] hover:text-[#080808] hover:border-transparent transition-all relative z-10" data-kid="105">Configure Forge</button>
+                </div>
+
+                <div class="p-12 glass-card border-[#C47810]/40 rounded-2xl relative shadow-[0_40px_100px_rgba(196,120,16,0.15)] flex flex-col justify-between transform md:-translate-y-8 z-10 overflow-hidden group transition-premium hover:translate-y-[-12px] gold-glow" data-kid="106">
+                    <div class="absolute inset-0 gold-wash opacity-20 group-hover:opacity-40 transition-opacity" data-kid="107"></div>
+                    <div class="absolute top-0 right-0 p-6 opacity-5 pointer-events-none" data-kid="108">
+                        <span class="font-display text-9xl leading-none italic font-bold text-[#C47810]" data-kid="109">V</span>
+                    </div>
+                    <div class="relative z-10" data-kid="110">
+                        <div class="flex justify-between items-center mb-8" data-kid="111">
+                            <span class="font-mono text-[9px] uppercase tracking-widest text-[#C47810] font-bold" data-kid="112">02 / Momentum</span>
+                            <span class="px-3 py-1 bg-[#C47810]/10 text-[#C47810] text-[8px] font-bold uppercase tracking-widest rounded-full border border-[#C47810]/20" data-kid="113">Most Popular</span>
+                        </div>
+                        <h3 class="font-display text-4xl text-white mb-6 font-light" data-kid="114">Velocity</h3>
+                        <p class="text-white/70 text-sm mb-10 leading-relaxed font-light" data-kid="115">High-velocity infrastructure designed for rapid scaling and complex conversion funnels.</p>
+                        <ul class="space-y-4 mb-12" data-kid="116">
+                            <li class="flex items-center gap-3 text-xs text-white font-medium" data-kid="117">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#C47810] shadow-[0_0_8px_#C47810]" data-kid="118"></span> Custom Design System
+                            </li>
+                            <li class="flex items-center gap-3 text-xs text-white font-medium" data-kid="119">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#C47810] shadow-[0_0_8px_#C47810]" data-kid="120"></span> CMS Infrastructure
+                            </li>
+                            <li class="flex items-center gap-3 text-xs text-white font-medium" data-kid="121">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#C47810] shadow-[0_0_8px_#C47810]" data-kid="122"></span> Advanced SEO Strategy
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-4 rounded-full bg-[#C47810] text-[#080808] text-[10px] font-bold uppercase tracking-widest hover:bg-[#E8A020] transition-all shadow-lg shadow-[#C47810]/20 relative z-10" data-kid="123">Forge Velocity</button>
+                </div>
+
+                <div class="p-12 glass-card hairline-gold-border rounded-2xl flex flex-col justify-between group transition-premium hover:translate-y-[-8px] gold-glow relative" data-kid="124">
+                    <div class="absolute inset-0 gold-wash opacity-0 group-hover:opacity-100 transition-opacity" data-kid="125"></div>
+                    <div class="relative z-10" data-kid="126">
+                        <span class="font-mono text-[9px] uppercase tracking-widest text-[#C47810] mb-8 block" data-kid="127">03 / Supremacy</span>
+                        <h3 class="font-display text-4xl text-white mb-6 font-light" data-kid="128">Apex</h3>
+                        <p class="text-white/50 text-sm mb-10 leading-relaxed font-light" data-kid="129">The pinnacle of digital craftsmanship. Bespoke ecosystems with deep logic integrations.</p>
+                        <ul class="space-y-4 mb-12" data-kid="130">
+                            <li class="flex items-center gap-3 text-xs text-white/60 font-light" data-kid="131">
+                                <span class="w-1 h-1 rounded-full bg-[#C47810]" data-kid="132"></span> Bespoke Web Apps
+                            </li>
+                            <li class="flex items-center gap-3 text-xs text-white/60 font-light" data-kid="133">
+                                <span class="w-1 h-1 rounded-full bg-[#C47810]" data-kid="134"></span> Database Logic
+                            </li>
+                            <li class="flex items-center gap-3 text-xs text-white/60 font-light" data-kid="135">
+                                <span class="w-1 h-1 rounded-full bg-[#C47810]" data-kid="136"></span> Dedicated Support
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full py-4 rounded-full border border-white/10 text-[10px] font-bold uppercase tracking-widest text-white/60 hover:bg-[#C47810] hover:text-[#080808] hover:border-transparent transition-all relative z-10" data-kid="137">Request Apex</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <section class="bg-[#080808] py-48 px-8 md:px-24 border-t border-white/5 relative overflow-hidden" data-kid="294">
+        <div class="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#C47810]/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-40" data-kid="295"></div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center relative z-10" data-kid="296">
+            <div class="relative" data-kid="297">
+                <div class="absolute -left-12 top-0 w-[1px] h-full bg-linear-to-b from-[#C47810] via-transparent to-transparent" data-kid="298"></div>
+                <span class="text-[10px] font-mono tracking-[0.4em] text-[#C47810] block mb-6 uppercase" data-kid="299">03 — PROPRIETARY PERFORMANCE</span>
+                <h2 class="font-display text-5xl md:text-7xl text-white font-light leading-tight mb-10" data-kid="300">
+                    Performance <br data-kid="301">
+                    <span class="italic gold-gradient-text" data-kid="302">by default.</span>
+                </h2>
+                <p class="text-white/50 text-xl font-light leading-relaxed mb-12 max-w-xl" data-kid="303">
+                    Engineering supremacy is non-negotiable. Every build undergoes rigorous automated audits to ensure instantaneous response times and flawless technical SEO indexing.
+                </p>
+
+                <div class="grid grid-cols-2 gap-10" data-kid="304">
+                    <div class="space-y-4" data-kid="305">
+                        <div class="flex justify-between items-end" data-kid="306">
+                            <span class="font-mono text-[10px] uppercase tracking-widest text-white/40" data-kid="307">Lighthouse Mastery</span>
+                            <span class="text-3xl font-display text-white" data-kid="308">100/100</span>
+                        </div>
+                        <div class="h-px w-full bg-white/5 overflow-hidden" data-kid="309">
+                            <div class="h-full w-full bg-[#C47810] shadow-[0_0_15px_rgba(196,120,16,0.4)]" data-kid="310"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-4" data-kid="311">
+                        <div class="flex justify-between items-end" data-kid="312">
+                            <span class="font-mono text-[10px] uppercase tracking-widest text-white/40" data-kid="313">SEO Status</span>
+                            <span class="text-3xl font-display text-white" data-kid="314">A++</span>
+                        </div>
+                        <div class="h-px w-full bg-white/5 overflow-hidden" data-kid="315">
+                            <div class="h-full w-full bg-[#C47810] shadow-[0_0_15px_rgba(196,120,16,0.4)]" data-kid="316"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 flex items-center gap-6" data-kid="317">
+                    <div class="px-5 py-2 glass-card hairline-gold-border rounded-full text-[9px] font-mono tracking-widest text-white/40 uppercase" data-kid="318">
+                        REAL-TIME AUDIT ACTIVE
+                    </div>
+                    <div class="flex items-center gap-2" data-kid="319">
+                        <div class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" data-kid="320"></div>
+                        <span class="text-[9px] font-mono tracking-widest text-white/20 uppercase" data-kid="321">Core Vitals: Passing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative" data-kid="322">
+                <div class="glass-card rounded-2xl p-2 gold-glow relative overflow-hidden group" data-kid="323">
+                    <div class="absolute inset-0 gold-wash opacity-0 group-hover:opacity-10 transition-opacity duration-700" data-kid="324"></div>
+                    <div class="bg-[#080808]/80 rounded-xl overflow-hidden border border-white/5 relative z-10" data-kid="325">
+                        <div class="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/[0.02]" data-kid="326">
+                            <div class="flex gap-2" data-kid="327">
+                                <div class="w-2 h-2 rounded-full bg-[#C47810]/30" data-kid="328"></div>
+                                <div class="w-2 h-2 rounded-full bg-white/5" data-kid="329"></div>
+                                <div class="w-2 h-2 rounded-full bg-white/5" data-kid="330"></div>
+                            </div>
+                            <div class="text-[9px] font-mono text-white/30 uppercase tracking-[0.3em]" data-kid="331">veltora_engine_v5.0</div>
+                        </div>
+
+                        <div class="p-8 md:p-10 space-y-10" data-kid="332">
+                            <div class="grid grid-cols-3 gap-4" data-kid="333">
+                                <div class="glass-card p-5 rounded-xl border-white/5 text-center transition-premium hover:border-[#C47810]/20" data-kid="334">
+                                    <p class="text-[8px] font-mono text-white/20 uppercase mb-2" data-kid="335">LCP</p>
+                                    <p class="text-2xl font-display text-white italic" data-kid="336">0.8<span class="text-xs non-italic opacity-40 ml-0.5" data-kid="337">s</span></p>
+                                </div>
+                                <div class="glass-card p-5 rounded-xl border-white/5 text-center transition-premium hover:border-[#C47810]/20" data-kid="338">
+                                    <p class="text-[8px] font-mono text-white/20 uppercase mb-2" data-kid="339">CLS</p>
+                                    <p class="text-2xl font-display text-white italic" data-kid="340">0.001</p>
+                                </div>
+                                <div class="glass-card p-5 rounded-xl border-white/5 text-center transition-premium hover:border-[#C47810]/20" data-kid="341">
+                                    <p class="text-[8px] font-mono text-white/20 uppercase mb-2" data-kid="342">FID</p>
+                                    <p class="text-2xl font-display text-white italic" data-kid="343">12<span class="text-xs non-italic opacity-40 ml-0.5" data-kid="344">ms</span></p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4 pt-6 font-mono text-[10px] text-white/40 border-t border-white/5" data-kid="345">
+                                <div class="flex gap-4" data-kid="346">
+                                    <span class="text-[#C47810]" data-kid="347">14:22:15</span>
+                                    <span data-kid="348">Analyzing FID metrics... <span class="text-[#C47810]" data-kid="349">[OPTIMAL]</span></span>
+                                </div>
+                                <div class="flex gap-4" data-kid="350">
+                                    <span class="text-[#C47810]" data-kid="351">14:22:18</span>
+                                    <span data-kid="352">Indexing Sitemap architecture... <span class="text-[#C47810]" data-kid="353">[COMPLETE]</span></span>
+                                </div>
+                                <div class="flex gap-4" data-kid="354">
+                                    <span class="text-[#C47810]" data-kid="355">14:22:21</span>
+                                    <span data-kid="356">Optimizing LCP delivery sequences...</span>
+                                </div>
+                                <div class="flex gap-4 pt-2" data-kid="357">
+                                    <span class="text-white/80 uppercase tracking-widest" data-kid="358">Veltora Engine: All systems nominal.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-40 px-8 md:px-24 bg-[#080808] border-t border-white/5 relative" data-kid="138">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center" data-kid="139">
+            <div class="relative" data-kid="140">
+                <div class="absolute -left-12 top-0 w-[1px] h-full bg-linear-to-b from-[#C47810] via-transparent to-transparent" data-kid="141"></div>
+                <span class="text-[10px] font-mono tracking-[0.4em] text-[#C47810] block mb-8 uppercase" data-kid="142">04 — The Philosophy</span>
+                <h2 class="font-display text-6xl font-light leading-[0.9] text-white mb-10" data-kid="143">
+                    One person. <br data-kid="144">
+                    <span class="italic gold-gradient-text" data-kid="145">Full studio output.</span>
+                </h2>
+                <p class="text-white/50 text-xl font-light leading-relaxed mb-8 max-w-lg" data-kid="146">
+                    Veltora exists at the intersection of cinematic design and elite engineering. We eliminate the noise between vision and execution.
+                </p>
+                <div class="flex gap-4" data-kid="147">
+                    <div class="px-4 py-2 glass-card rounded-full text-[10px] font-mono tracking-widest text-white/60" data-kid="148">CERTIFIED ALX ENG</div>
+                    <div class="px-4 py-2 glass-card rounded-full text-[10px] font-mono tracking-widest text-white/60" data-kid="149">DESIGN-LED CODE</div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4" data-kid="150">
+                <div class="glass-card p-8 rounded-2xl border-white/5 group hover:border-[#C47810]/20 transition-premium" data-kid="151">
+                    <span class="text-[10px] font-mono text-white/30 block mb-4 uppercase tracking-widest" data-kid="152">Tech Stack</span>
+                    <p class="text-sm text-white font-light" data-kid="153">Next.js, TypeScript, Supabase, Tailwind, Framer Motion.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border-white/5 group hover:border-[#C47810]/20 transition-premium" data-kid="154">
+                    <span class="text-[10px] font-mono text-white/30 block mb-4 uppercase tracking-widest" data-kid="155">Markets</span>
+                    <p class="text-sm text-white font-light leading-relaxed" data-kid="156">Building for Africa and the global digital frontier with precision-tuned interfaces.</p>
+                </div>
+                <div class="col-span-2 glass-card p-8 rounded-2xl border-white/5 group hover:border-[#C47810]/20 transition-premium" data-kid="157">
+                    <span class="text-[10px] font-mono text-white/30 block mb-4 uppercase tracking-widest" data-kid="158">Certification</span>
+                    <div class="flex items-center gap-4" data-kid="159">
+                        <div class="w-12 h-12 rounded-lg bg-[#C47810]/10 flex items-center justify-center border border-[#C47810]/20" data-kid="160">
+                            <i class="fa-solid fa-award text-[#C47810]" data-kid="161"></i>
+                        </div>
+                        <p class="text-sm text-white font-light" data-kid="162">ALX Certified Software Engineer. Detail-obsessed. Architecture-driven.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="bg-[#080808] py-48 px-8 md:px-24 border-t border-white/5 relative overflow-hidden" data-kid="163">
+        <div class="max-w-7xl mx-auto" data-kid="164">
+            <div class="mb-32 flex flex-col md:flex-row items-end justify-between border-l border-[var(--gold)]/20 pl-12" data-kid="165">
+                <div data-kid="166">
+                    <span class="font-mono text-[var(--gold)] text-[11px] tracking-[0.6em] uppercase mb-8 block" data-kid="167">05 — Works Archive</span>
+                    <h2 class="font-display text-[clamp(3.5rem,7vw,6.5rem)] font-light text-white leading-[1] mb-6" data-kid="168">
+                        Atmospheric <span class="italic text-glow-gold gold-gradient-text" data-kid="169">Portfolio</span>.
+                    </h2>
+                    <p class="text-white/40 text-sm font-light max-w-sm" data-kid="170">Selected architectural builds for global leaders in aviation, hospitality, and luxury retail.</p>
+                </div>
+                <div class="hidden md:flex flex-col items-end pb-4" data-kid="171">
+                    <a href="javascript:void(0)" class="group flex items-center gap-6" data-kid="172">
+                        <span class="text-[10px] font-mono tracking-[0.4em] uppercase text-white/40 group-hover:text-white transition-colors" data-kid="173">Browse Archive</span>
+                        <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[var(--gold)] transition-all" data-kid="174">
+                            <i class="fa-solid fa-arrow-right text-[var(--gold)]" data-kid="175"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-48" data-kid="176">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center" data-kid="177">
+                    <div class="lg:col-span-7 relative h-[700px] overflow-hidden rounded-[2px] group" data-kid="178">
+                        <img src="https://images.pexels.com/photos/7031406/pexels-photo-7031406.jpeg?auto=compress&cs=tinysrgb&w=1200&q=90" alt="Eagle Air" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" decoding="async" loading="lazy" data-kid="179">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-1000" data-kid="180"></div>
+                    </div>
+                    <div class="lg:col-span-5 pr-12" data-kid="181">
+                        <span class="font-mono text-[10px] tracking-[0.5em] uppercase text-[var(--gold)] mb-8 block opacity-80" data-kid="182">01 / Aviation Architecture</span>
+                        <h3 class="font-display text-6xl text-white mb-10 leading-[1.1] italic font-light" data-kid="183">Eagle Air <br data-kid="184">Flight School</h3>
+                        <p class="text-white/40 text-lg font-light leading-relaxed mb-12 italic" data-kid="185">
+                            "The precision in layout reflects our cockpit checklists. Every pixel serves a purpose."
+                        </p>
+                        <button class="px-12 py-5 rounded-full border border-white/20 text-[10px] font-bold tracking-[0.4em] text-white hover:bg-white hover:text-black transition-all uppercase cursor-pointer" data-kid="186">View Project</button>
+                    </div>
+                </div>
+
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center" data-kid="187">
+                    <div class="lg:col-span-5 lg:order-1 order-2 pl-12" data-kid="188">
+                        <span class="font-mono text-[10px] tracking-[0.5em] uppercase text-[var(--gold)] mb-8 block opacity-80" data-kid="189">02 / Hospitality Boutique</span>
+                        <h3 class="font-display text-6xl text-white mb-10 leading-[1.1] italic font-light" data-kid="190">Hotel Nine <br data-kid="191">Interiors</h3>
+                        <p class="text-white/40 text-lg font-light leading-relaxed mb-12 italic" data-kid="192">
+                            Editorial-grade digital spaces that mirror the tactile luxury of a five-star suite.
+                        </p>
+                        <button class="px-12 py-5 rounded-full border border-white/20 text-[10px] font-bold tracking-[0.4em] text-white hover:bg-white hover:text-black transition-all uppercase cursor-pointer" data-kid="193">View Project</button>
+                    </div>
+                    <div class="lg:col-span-7 lg:order-2 order-1 relative h-[700px] overflow-hidden rounded-[2px] group" data-kid="194">
+                        <img src="https://images.pexels.com/photos/2507007/pexels-photo-2507007.jpeg?auto=compress&cs=tinysrgb&w=1200&q=90" alt="Hotel Nine" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" decoding="async" loading="lazy" data-kid="195">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-1000" data-kid="196"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-40 px-8 md:px-24 bg-[#080808] border-t border-white/5 relative" data-kid="197">
+        <div class="max-w-7xl mx-auto" data-kid="198">
+            <div class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8" data-kid="199">
+                <div data-kid="200">
+                    <span class="text-[10px] font-mono tracking-[0.4em] text-[#C47810] block mb-6 uppercase" data-kid="201">06 — Methodology</span>
+                    <h2 class="font-display text-6xl md:text-7xl font-light leading-[0.9] text-white" data-kid="202">
+                        A lineage of <br data-kid="203">
+                        <span class="italic font-light" data-kid="204">order.</span>
+                    </h2>
+                </div>
+                <div class="h-[1px] flex-1 mx-12 mb-4 bg-linear-to-r from-white/10 to-transparent hidden md:block" data-kid="205"></div>
+                <p class="max-w-xs text-sm font-light text-white/40 leading-relaxed mb-2" data-kid="206">
+                    Precision is not an accident. It is the result of high intention, sincere effort, and intelligent execution.
+                </p>
+            </div>
+
+            <div class="relative" data-kid="207">
+                <div class="absolute top-[5px] left-0 right-0 h-[1px] bg-white/10" data-kid="208"></div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12" data-kid="209">
+                    <div class="relative pt-8 group" data-kid="210">
+                        <div class="absolute top-[-4px] left-0 w-2.5 h-2.5 rounded-full bg-[#C47810] shadow-[0_0_10px_rgba(196,120,16,0.5)] group-hover:scale-150 transition-transform" data-kid="211"></div>
+                        <span class="text-[10px] font-mono text-white/30 block mb-4 uppercase" data-kid="212">Discovery</span>
+                        <h4 class="font-display text-2xl font-light text-white mb-4" data-kid="213">The Blueprint</h4>
+                        <p class="text-sm text-white/40 leading-relaxed" data-kid="214">Defining the core objective and technical landscape of your vision.</p>
+                    </div>
+
+                    <div class="relative pt-8 group" data-kid="215">
+                        <div class="absolute top-[-4px] left-0 w-2.5 h-2.5 rounded-full bg-[#C47810] shadow-[0_0_10px_rgba(196,120,16,0.5)] group-hover:scale-150 transition-transform" data-kid="216"></div>
+                        <span class="text-[10px] font-mono text-white/30 block mb-4 uppercase" data-kid="217">Design</span>
+                        <h4 class="font-display text-2xl font-light text-white mb-4" data-kid="218">Aesthetic Logic</h4>
+                        <p class="text-sm text-white/40 leading-relaxed" data-kid="219">Crafting high-fidelity interfaces that speak with authority and grace.</p>
+                    </div>
+
+                    <div class="relative pt-8 group" data-kid="220">
+                        <div class="absolute top-[-4px] left-0 w-2.5 h-2.5 rounded-full bg-[#C47810] shadow-[0_0_10px_rgba(196,120,16,0.5)] group-hover:scale-150 transition-transform" data-kid="221"></div>
+                        <span class="text-[10px] font-mono text-white/30 block mb-4 uppercase" data-kid="222">Build</span>
+                        <h4 class="font-display text-2xl font-light text-white mb-4" data-kid="223">Pure Syntax</h4>
+                        <p class="text-sm text-white/40 leading-relaxed" data-kid="224">Translating design into a performant, living digital experience.</p>
+                    </div>
+
+                    <div class="relative pt-8 group" data-kid="225">
+                        <div class="absolute top-[-4px] left-0 w-2.5 h-2.5 rounded-full bg-[#C47810] shadow-[0_0_10px_rgba(196,120,16,0.5)] group-hover:scale-150 transition-transform" data-kid="226"></div>
+                        <span class="text-[10px] font-mono text-white/30 block mb-4 uppercase" data-kid="227">Launch</span>
+                        <h4 class="font-display text-2xl font-light text-white mb-4" data-kid="228">The Genesis</h4>
+                        <p class="text-sm text-white/40 leading-relaxed" data-kid="229">Deployment onto the global edge, optimized for instant delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="bg-[#080808] py-48 px-8 md:px-24 border-t border-white/5 relative overflow-hidden" data-kid="230">
+        <div class="absolute top-0 left-1/4 w-px h-full bg-linear-to-b from-[#C47810]/10 via-transparent to-transparent opacity-30" data-kid="231"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C47810]/5 blur-[160px] rounded-full pointer-events-none opacity-40" data-kid="232"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start" data-kid="233">
+            <div data-kid="234">
+                <span class="font-mono text-[#C47810] text-[10px] tracking-[0.6em] uppercase mb-10 block" data-kid="235">07 — Project Transmission</span>
+                <h2 class="font-display text-[clamp(4rem,9vw,6.5rem)] font-light text-white mb-10 leading-[0.9]" data-kid="236">
+                    Let's Build <br data-kid="237">
+                    <span class="italic gold-gradient-text drop-shadow-2xl" data-kid="238">Supremacy.</span>
+                </h2>
+                <p class="text-white/40 text-xl font-light leading-relaxed mb-16 max-w-md" data-kid="239">
+                    We're currently accepting high-fidelity projects. Reach out to start a discovery session and define your digital architecture.
+                </p>
+                <div class="space-y-6 border-l border-[#C47810]/20 pl-8" data-kid="240">
+                    <div data-kid="77">
+                        <p class="font-mono text-[9px] uppercase tracking-widest text-white/20 mb-2" data-kid="241">Direct Channel</p>
+                        <a href="mailto:hello@veltora.studio" class="font-display text-3xl text-white hover:text-[#C47810] transition-colors duration-500" data-kid="242">hello@veltora.studio</a>
+                    </div>
+                    <div data-kid="78">
+                        <p class="font-mono text-[9px] uppercase tracking-widest text-white/20 mb-2" data-kid="243">Availability</p>
+                        <p class="text-white/60 text-sm font-light" data-kid="244">Accepting select commissions for Q4 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card hairline-gold-border rounded-2xl p-10 md:p-14 relative overflow-hidden group shadow-[0_0_30px_rgba(232,160,32,0.1)]" data-kid="245">
+                <div class="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none" data-kid="246"></div>
+                <form class="relative z-10 space-y-10" onsubmit="return false" data-kid="247">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10" data-kid="248">
+                        <div class="space-y-3" data-kid="249">
+                            <label class="font-mono text-[9px] uppercase tracking-widest text-white/30 block" data-kid="250">Identity</label>
+                            <input type="text" class="w-full bg-white/[0.03] border-b border-white/10 py-3 text-white font-light focus:outline-hidden focus:border-[#C47810] focus:bg-white/[0.05] transition-all" placeholder="Full Name" data-kid="251">
+                        </div>
+                        <div class="space-y-3" data-kid="252">
+                            <label class="font-mono text-[9px] uppercase tracking-widest text-white/30 block" data-kid="253">Access Port</label>
+                            <input type="email" class="w-full bg-white/[0.03] border-b border-white/10 py-3 text-white font-light focus:outline-hidden focus:border-[#C47810] focus:bg-white/[0.05] transition-all" placeholder="Email Address" data-kid="254">
+                        </div>
+                    </div>
+                    <div class="space-y-3" data-kid="255">
+                        <label class="font-mono text-[9px] uppercase tracking-widest text-white/30 block" data-kid="256">Architecture Tier</label>
+                        <div class="relative" data-kid="257">
+                            <select class="w-full bg-white/[0.03] border-b border-white/10 py-4 text-white/50 font-light focus:outline-hidden focus:border-[#C47810] focus:bg-white/[0.05] transition-all appearance-none cursor-pointer pr-10" data-kid="258">
+                                <option class="bg-[#080808]" data-kid="259">Forge Architecture</option>
+                                <option class="bg-[#080808]" data-kid="260">Velocity Infrastructure</option>
+                                <option class="bg-[#080808]" data-kid="261">Apex Ecosystem</option>
+                                <option class="bg-[#080808]" data-kid="262">Custom Specification</option>
+                            </select>
+                            <div class="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none opacity-40" data-kid="263">
+                                <i class="fa-solid fa-chevron-down text-[10px]" data-kid="264"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-3" data-kid="265">
+                        <label class="font-mono text-[9px] uppercase tracking-widest text-white/30 block" data-kid="266">Vision Brief</label>
+                        <textarea rows="4" class="w-full bg-white/[0.03] border-b border-white/10 py-3 text-white font-light focus:outline-hidden focus:border-[#C47810] focus:bg-white/[0.05] transition-all resize-none" placeholder="Describe the supremacy you wish to build..." data-kid="267"></textarea>
+                    </div>
+                    <button class="w-full py-6 bg-[#C47810] text-[#080808] font-bold uppercase tracking-[0.4em] rounded-full text-[10px] hover:bg-white hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] transition-all duration-500 shadow-2xl relative overflow-hidden group/btn" data-kid="268">
+                        <span class="relative z-10" data-kid="269">Transmit Inquiry</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-[#080808] border-t border-white/5 pt-40 pb-20 px-8 md:px-24 overflow-hidden relative" data-kid="242">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 select-none pointer-events-none opacity-[0.05]" data-kid="243">
+            <span class="font-display text-[25vw] leading-none tracking-tighter uppercase font-bold text-white" data-kid="244">Veltora</span>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10" data-kid="245">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-24 mb-40" data-kid="246">
+                <div class="lg:col-span-5 space-y-12" data-kid="247">
+                    <div class="flex items-center gap-2" data-kid="248">
+                        <span class="font-display text-4xl tracking-[0.2em] font-light text-white uppercase" data-kid="249">
+                            <span class="text-[#C47810]" data-kid="250">V</span>eltora
+                        </span>
+                    </div>
+                    <p class="text-white/40 text-xl font-light leading-relaxed max-w-sm" data-kid="251">
+                        Crafting precision-built digital experiences for the next generation of industry leaders.
+                    </p>
+                    <div class="flex gap-8" data-kid="252">
+                        <a href="javascript:void(0)" class="text-white/30 hover:text-[#C47810] transition-colors text-2xl" data-kid="253"><i class="fa-brands fa-instagram" data-kid="254"></i></a>
+                        <a href="javascript:void(0)" class="text-white/30 hover:text-[#C47810] transition-colors text-2xl" data-kid="255"><i class="fa-brands fa-linkedin-in" data-kid="256"></i></a>
+                        <a href="javascript:void(0)" class="text-white/30 hover:text-[#C47810] transition-colors text-2xl" data-kid="257"><i class="fa-brands fa-x-twitter" data-kid="258"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-16" data-kid="259">
+                    <div class="space-y-8" data-kid="260">
+                        <p class="font-mono text-[9px] uppercase tracking-widest text-white/20" data-kid="261">Studio</p>
+                        <ul class="space-y-4 font-display text-lg text-white/60" data-kid="262">
+                            <li data-kid="263"><a href="#" class="hover:text-[#C47810] transition-colors" data-kid="264">The Lab</a></li>
+                            <li data-kid="265"><a href="#" class="hover:text-[#C47810] transition-colors" data-kid="266">Manifesto</a></li>
+                            <li data-kid="267"><a href="#" class="hover:text-[#C47810] transition-colors" data-kid="268">Work</a></li>
+                            <li data-kid="269"><a href="#" class="hover:text-[#C47810] transition-colors" data-kid="270">Archive</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-8" data-kid="271">
+                        <p class="font-mono text-[9px] uppercase tracking-widest text-white/20" data-kid="272">Services</p>
+                        <ul class="space-y-4 font-display text-lg text-white/60" data-kid="273">
+                            <li data-kid="274"><a href="#" class="hover:text-[#C47810] transition-colors" data-kid="275">Engineering</a></li>
+                            <li data-kid="276"><a href="#" class="hover:text-[#C47810] transition-colors" data-kid="277">UI Design</a></li>
+                            <li data-kid="278"><a href="#" class="hover:text-[#C47810] transition-colors" data-kid="279">Branding</a></li>
+                            <li data-kid="280"><a href="#" class="hover:text-[#C47810] transition-colors" data-kid="281">Strategy</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-8 col-span-2 md:col-span-1" data-kid="282">
+                        <p class="font-mono text-[9px] uppercase tracking-widest text-white/20" data-kid="283">Connect</p>
+                        <ul class="space-y-4 font-display text-lg text-white/60" data-kid="284">
+                            <li data-kid="285"><a href="#" class="hover:text-[#C47810] transition-colors italic" data-kid="286">Inquiry System</a></li>
+                            <li data-kid="287"><p class="text-white/30 font-light text-sm" data-kid="288">Pretoria, South Africa</p></li>
+                            <li data-kid="289"><p class="text-white/30 font-light text-sm" data-kid="290">+27 (0) 72 455 1290</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center pt-20 border-t border-white/5 gap-8" data-kid="291">
+                <p class="font-mono text-[8px] uppercase tracking-widest text-white/20 italic" data-kid="292">
+                    Precision built in Pretoria & Nairobi
+                </p>
+                <p class="font-mono text-[9px] uppercase tracking-widest text-white/40" data-kid="293">
+                    © 2025 Veltora Web Studio — All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</div></div>
+  
+  
+</body></html>

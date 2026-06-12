@@ -67,20 +67,22 @@ export const projects = [
   {
     id: 1,
     name: 'Eagle Air Flight School',
-    category: 'Education',
+    category: 'Aviation Architecture',
     year: '2024',
     url: 'https://eagle-air-flight-school.vercel.app/',
-    description: 'Full aviation school website with course listings and enquiry system.',
+    description: '"The precision in layout reflects our cockpit checklists. Every pixel serves a purpose."',
     size: 'large',
+    image: '/work-eagle.jpg',
   },
   {
     id: 2,
-    name: 'ELI Two',
-    category: 'Business',
+    name: 'Hotel Nine Interiors',
+    category: 'Hospitality Boutique',
     year: '2024',
-    url: 'https://eli-two.vercel.app/',
-    description: 'Clean business website with modern layout.',
-    size: 'medium',
+    url: 'https://hotel-nine-omega.vercel.app/',
+    description: 'Editorial-grade digital spaces that mirror the tactile luxury of a five-star suite.',
+    size: 'large',
+    image: '/work-hotel.jpg',
   },
   {
     id: 3,
@@ -88,63 +90,24 @@ export const projects = [
     category: 'Education',
     year: '2024',
     url: 'https://shisho-s-code-dojo.vercel.app/',
-    description: 'Coding education platform with course structure.',
+    description: 'Coding education platform with structured learning paths.',
     size: 'medium',
+    image: '/work-code.jpg',
   },
-  {
-    id: 4,
-    name: 'Tennis Whisperer',
-    category: 'Sports',
-    year: '2024',
-    url: 'https://tenniswhisperer.vercel.app/',
-    description: 'Coaching and booking platform for tennis professionals.',
-    size: 'large',
-  },
-  {
-    id: 5,
-    name: 'TOGB Agency',
-    category: 'Agency',
-    year: '2024',
-    url: 'https://togb-agency.vercel.app/',
-    description: 'Multi-service agency with portfolio showcase.',
-    size: 'medium',
-  },
-  {
-    id: 6,
-    name: 'Hotel Nine',
-    category: 'Hospitality',
-    year: '2024',
-    url: 'https://hotel-nine-omega.vercel.app/',
-    description: 'Boutique hotel website with room showcase and booking.',
-    size: 'large',
-  },
-  {
-    id: 7,
-    name: 'Tabernacle of Grace',
-    category: 'Community',
-    year: '2024',
-    url: 'https://tabernacle-of-grace-fellowship.vercel.app/',
-    description: 'Church fellowship website with events and sermons.',
-    size: 'medium',
-  },
-  {
-    id: 8,
-    name: 'LM Motors',
-    category: 'Automotive',
-    year: '2024',
-    url: 'https://lm-motors.vercel.app/',
-    description: 'Vehicle dealership with inventory listings.',
-    size: 'medium',
-  },
-  {
-    id: 9,
-    name: 'Takalani Day Care',
-    category: 'Education',
-    year: '2024',
-    url: 'https://takalani-day-care-center.vercel.app/',
-    description: 'Warm, welcoming day care centre website.',
-    size: 'medium',
-  },
+]
+
+export const performanceMetrics = [
+  { label: 'LCP Metrics', value: '0.8s', percentage: 98 },
+  { label: 'Speed Index', value: '100/100', percentage: 100 },
+  { label: 'SEO Indexing', value: 'A++', percentage: 100 },
+  { label: 'FID Performance', value: '12ms', percentage: 99 },
+]
+
+export const auditLogs = [
+  { timestamp: '14:02:11', message: 'Deployment successful: Apex_Node_04' },
+  { timestamp: '14:02:08', message: 'SEO Indexing: Optimization sequence complete' },
+  { timestamp: '14:02:05', message: 'Analyzing FID: Latency within threshold' },
+  { timestamp: '14:02:02', message: 'Optimizing LCP: Image priority established' },
 ]
 
 export const process = [
@@ -179,3 +142,11 @@ export const testimonials = [
   },
   // Add real testimonials as they come in
 ]
+
+export const NAV_LINKS = [
+  { label: 'About', href: '#about' },
+  { label: 'Portfolio', href: '#work' },
+  { label: 'Process',   href: '#process' },
+  { label: 'Services',  href: '#services' },
+]
+
