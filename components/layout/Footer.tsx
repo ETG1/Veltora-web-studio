@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-
+import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="bg-dark border-t border-white/5 pt-40 pb-20 px-8 md:px-24 overflow-hidden relative">
@@ -64,9 +64,14 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 sm:pt- border-t border-white/5 gap-8">
-          <p className="font-mono text-[8px] uppercase tracking-widest text-white/20 italic">
-            Precision built in Pretoria
-          </p>
+          <div className="flex items-center gap-6">
+            <Link href="/terms" className="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors duration-200">
+              Terms of Use
+            </Link>
+            <Link href="/privacy" className="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[rgba(255,255,255,0.25)] hover:text-gold transition-colors duration-200">
+              Privacy Policy
+            </Link>
+          </div>
           <p className="font-mono text-[9px] uppercase tracking-widest text-white/40">
             © {new Date().getFullYear()} Veltora Web Studio — All Rights Reserved.
           </p>

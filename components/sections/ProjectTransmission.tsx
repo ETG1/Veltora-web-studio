@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function ProjectTransmission() {
   return (
@@ -115,6 +116,25 @@ export default function ProjectTransmission() {
                 className="w-full bg-white/3 border-b border-white/10 py-3 text-white font-light focus:outline-none focus:border-gold-deep focus:bg-white/5 transition-all resize-none px-3 rounded-xl"
                 placeholder="Describe the supremacy you wish to build..."
               />
+            </div>
+
+            <div className="flex items-start gap-4">
+              <label className="relative flex cursor-pointer items-center p-1" htmlFor="terms">
+                <input
+                  type="checkbox"
+                  className="peer relative h-5 w-5 cursor-pointer appearance-none rounded-sm border border-[rgba(232,160,32,0.3)] transition-all checked:border-gold checked:bg-gold"
+                  id="terms"
+                  required
+                />
+                <span className="absolute text-dark opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" strokeWidth="1">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                </span>
+              </label>
+              <label className="font-mono text-[0.75rem] tracking-widest text-[rgba(255,255,255,0.45)] cursor-pointer mt-1" htmlFor="terms">
+                I have read and agree to the <Link href="/terms" className="text-gold hover:text-white transition-colors">Terms of Use</Link> and <Link href="/privacy" className="text-gold hover:text-white transition-colors">Privacy Policy</Link>.
+              </label>
             </div>
 
             <button className="w-full py-6 bg-gold-deep text-dark font-bold uppercase tracking-[0.4em] rounded-full text-[10px] hover:bg-white hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] transition-all duration-500 shadow-2xl relative overflow-hidden group/btn">
