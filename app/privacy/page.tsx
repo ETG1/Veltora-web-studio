@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import InteractiveGridBackground from '@/components/ui/InteractiveGridBackground';
 
 export const metadata = {
   title: 'Privacy Policy | Veltora Web Studio',
@@ -15,15 +16,7 @@ export default function PrivacyPolicy() {
 
   return (
     <main className="min-h-screen relative bg-dark text-[#F5F5F5] pt-40 pb-24 px-6 md:px-12 selection:bg-gold selection:text-dark overflow-hidden">
-      <div 
-        className="absolute inset-0 z-0 pointer-events-none opacity-5"
-        style={{
-          backgroundImage: "url('/icon.svg')",
-          backgroundSize: "80px 80px",
-          backgroundRepeat: "repeat",
-          backgroundPosition: "center"
-        }}
-      />
+      <InteractiveGridBackground />
       <article className="max-w-[720px] mx-auto relative z-10">
         <header className="mb-16">
           <h1 className="font-display text-5xl md:text-6xl text-[#F5F5F5] mb-6">
