@@ -201,8 +201,30 @@ export default function ProjectTransmission() {
   return (
     <section
       id="contact"
-      className="bg-transparent py-48 px-8 md:px-24 border-t border-white/5 relative"
+      className="bg-dark py-48 px-8 md:px-24 border-t border-white/5 relative"
     >
+      {/* Atmospheric background */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none bg-fixed"
+        style={{
+          backgroundImage: "url('/aerial_city_lights_at_night.jpeg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+      <div
+        className="absolute inset-0 z-1 pointer-events-none"
+        style={{ background: 'rgba(8,8,8,0.88)' }}
+      />
+      {/* Gradient bleeds */}
+      <div
+        className="absolute top-0 left-0 right-0 h-[180px] z-2 pointer-events-none"
+        style={{ background: 'linear-gradient(to bottom, #080808 0%, transparent 100%)' }}
+      />
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[180px] z-2 pointer-events-none"
+        style={{ background: 'linear-gradient(to top, #080808 0%, transparent 100%)' }}
+      />
       {/* Ambient elements */}
       <div className="absolute top-0 left-1/4 w-px h-full bg-linear-to-b from-gold-deep/10 via-transparent to-transparent opacity-30 z-2" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-deep/5 blur-[160px] rounded-full pointer-events-none opacity-40 z-2" />
@@ -218,11 +240,11 @@ export default function ProjectTransmission() {
         >
           <div className="absolute -left-12 top-0 w-px h-full bg-linear-to-b from-gold-deep via-transparent to-transparent hidden md:block" />
           <span className="section-label block mb-6 uppercase">
-            Reach out 
+            07 — Project Transmission
           </span>
           <h2 className="font-display text-[clamp(4rem,9vw,6.5rem)] font-light text-white mb-10 leading-[0.9]">
             Let&apos;s Build <br />
-            <span className="italic gold-text drop-shadow-2xl">Your Competitive Advantage.</span>
+            <span className="italic gold-text drop-shadow-2xl">Supremacy.</span>
           </h2>
           <p className="text-white/40 text-xl font-light leading-relaxed mb-16 max-w-md">
             We&apos;re currently accepting high-fidelity projects. Reach out to start a
@@ -324,13 +346,13 @@ export default function ProjectTransmission() {
                 {/* ── Row 1: Name + Email ── */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <FieldLabel>Your Name</FieldLabel>
+                    <FieldLabel>Identity</FieldLabel>
                     <input
-                      id="name"
+                      id="fullName"
                       type="text"
                       autoComplete="name"
                       className={inputBase}
-                      placeholder="Joy Lerato"
+                      placeholder="Full Name"
                       value={form.fullName}
                       onChange={(e) => set('fullName', e.target.value)}
                       onBlur={() => touch('fullName')}
@@ -339,13 +361,13 @@ export default function ProjectTransmission() {
                     <FieldError message={errors.fullName} />
                   </div>
                   <div>
-                    <FieldLabel>Email</FieldLabel>
+                    <FieldLabel>Access Port</FieldLabel>
                     <input
-                      id="[EMAIL_ADDRESS]"
+                      id="email"
                       type="email"
                       autoComplete="email"
                       className={inputBase}
-                      placeholder="youremail@gmail.com"
+                      placeholder="Email Address"
                       value={form.email}
                       onChange={(e) => set('email', e.target.value)}
                       onBlur={() => touch('email')}

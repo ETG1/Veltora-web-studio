@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: 'Precision-built digital experiences.',
     url: 'https://veltora.co.za',
     siteName: 'Veltora',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: '/icon.svg', width: 1200, height: 630 }],
     type: 'website',
   },
   twitter: {
@@ -28,10 +28,15 @@ export const metadata: Metadata = {
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Cursor from '@/components/ui/Cursor'
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <head>
         <link rel="preload" href="/hero-cinematic.jpeg" as="image" fetchPriority="high" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

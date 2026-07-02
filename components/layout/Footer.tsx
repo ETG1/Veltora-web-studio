@@ -2,10 +2,31 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import SideRays from '../ui/SideRays'
+
 export default function Footer() {
   return (
-    <footer className="bg-dark border-t border-white/5 pt-40 pb-20 px-8 md:px-24 overflow-hidden relative">
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 select-none pointer-events-none opacity-[0.05]">
+    <div className="w-full px-4 md:px-8 pb-8 pt-20 bg-black">
+      <footer className="glass-card rounded-[2.5rem] relative overflow-hidden pt-32 pb-12 px-8 md:px-24 border border-white/5">
+        
+        {/* Animated SideRays Background */}
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-80">
+          <SideRays
+            speed={2}
+            rayColor1="#EAB308"
+            rayColor2="#C47810"
+            intensity={2}
+            spread={1.8}
+            origin="top-right"
+            tilt={0}
+            saturation={1.5}
+            blend={0.75}
+            falloff={1.6}
+            opacity={1}
+          />
+        </div>
+
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 select-none pointer-events-none opacity-[0.05] z-0">
         <span className="font-display text-[25vw] leading-none tracking-tighter uppercase font-bold text-white">Veltora</span>
       </div>
 
@@ -78,5 +99,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </div>
   )
 }

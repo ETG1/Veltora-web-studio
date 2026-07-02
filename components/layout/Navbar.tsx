@@ -67,7 +67,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const sectionIds = NAV_LINKS
-      .map(link => link.href.replace('#', ''))
+      .map(link => link.href.split('#')[1])
       .filter(Boolean)
 
     const observers: IntersectionObserver[] = []
@@ -125,8 +125,8 @@ export default function Navbar() {
       className={cn(
         "fixed z-50 transition-all duration-500 max-w-full mx-2 md:mx-12 lg:mx-16",
         scrolled
-          ? "top-2 left-2 right-2 md:top-4 md:left-8 md:right-8 lg:top-4 lg:left-16 lg:right-16 rounded-xl md:rounded-2xl shadow-md shadow-gold/30 backdrop-blur-sm bg-[rgba(11,11,11,0.62)] border border-[rgba(232,160,32,0.18)]"
-          : "top-0 left-0 right-0 rounded-none border-transparent"
+          ? "top-4 left-4 right-4 md:top-4 md:left-8 md:right-8 lg:top-4 lg:left-16 lg:right-16 rounded-xl md:rounded-2xl shadow-md shadow-gold/30 backdrop-blur-sm bg-[rgba(11,11,11,0.62)] border border-[rgba(232,160,32,0.18)]"
+          : "top-4 left-0 right-0 rounded-none border-transparent"
       )}
     >
         <div className="h-16 w-full px-6 sm:px-4 md:px-6 flex items-center justify-between relative min-w-0">
@@ -146,7 +146,7 @@ export default function Navbar() {
         {/* Zone 2 — Nav links (Desktop) */}
         <nav className="hidden lg:flex items-center gap-9 absolute left-1/2 -translate-x-1/2">
           {NAV_LINKS.map((link) => {
-            const sectionId = link.href.replace('#', '')
+            const sectionId = link.href.split('#')[1]
             return (
               <NavLink
                 key={link.href}
@@ -162,7 +162,7 @@ export default function Navbar() {
         {/* Zone 3 — CTA + hamburger */}
         <div className="shrink-0 flex items-center gap-2 sm:gap-4">
           <Link
-            href="#contact"
+            href="/#contact"
             className="hidden lg:inline-flex bg-transparent border border-[rgba(232,160,32,0.18)] text-gold hover:bg-gold hover:text-dark font-medium font-mono text-[0.68rem] tracking-[0.15em] uppercase px-5 py-2.5 rounded-full items-center gap-2 transition-all duration-400 "
           >
             START PROJECT
@@ -206,7 +206,7 @@ export default function Navbar() {
             <div className="pt-4 pb-6 px-3 sm:px-4 flex flex-col min-w-0">
               <ul className="flex flex-col mb-4 min-w-0">
                 {NAV_LINKS.map((link, i) => {
-                  const sectionId = link.href.replace('#', '')
+                  const sectionId = link.href.split('#')[1]
                   const isActive = activeSection === sectionId
 
                   return (
@@ -240,7 +240,7 @@ export default function Navbar() {
                 className="w-full min-w-0"
               >
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   onClick={() => setMenuOpen(false)}
                   className="flex w-full justify-center bg-gold hover:bg-gold-deep text-dark font-medium font-mono text-[0.65rem] sm:text-[0.68rem] tracking-[0.15em] uppercase px-4 sm:px-5 py-2.5 rounded-full items-center gap-2 transition-colors duration-200 shrink-0"
                 >

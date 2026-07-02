@@ -138,7 +138,7 @@
         "bodyAttrs": " class=\"bg-[var(--dark)]\"",
         "head": "<meta charset=\"UTF-8\">\n    <title>Veltora — Master Assembly</title>\n    <script src=\"https://unpkg.com/@tailwindcss/browser@4\"></script>"
       },
-      "viewportScrollY": 0
+      "viewportScrollY": 973
     }
   },
   "themes": {},

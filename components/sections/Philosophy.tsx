@@ -127,7 +127,7 @@ function IDECard() {
             className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-300 group/file ${activeFile === 'markets' ? 'bg-amber-500/10' : 'hover:bg-white/5'}`}
           >
             <img 
-              src="/markets.svg" 
+              src="/globe.svg" 
               alt="Markets"
               className={`w-4 h-4 transition-all duration-300 ${activeFile === 'markets' ? 'opacity-100 drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]' : 'opacity-60 grayscale group-hover/file:opacity-100 group-hover/file:grayscale-0 group-hover/file:drop-shadow-[0_0_8px_rgba(245,158,11,0.4)]'}`} 
             />
@@ -139,7 +139,7 @@ function IDECard() {
             className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-300 group/file ${activeFile === 'certification' ? 'bg-amber-500/10' : 'hover:bg-white/5'}`}
           >
             <img 
-              src="/certification.svg" 
+              src="/icon.svg" 
               alt="Certification"
               className={`w-4 h-4 transition-all duration-300 ${activeFile === 'certification' ? 'opacity-100 drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]' : 'opacity-60 grayscale group-hover/file:opacity-100 group-hover/file:grayscale-0 group-hover/file:drop-shadow-[0_0_8px_rgba(245,158,11,0.4)]'}`} 
             />
@@ -175,11 +175,11 @@ function IDECard() {
                 className="w-full relative"
               >
                 {/* ALX Watermark */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 text-8xl font-display text-white/2 italic pointer-events-none select-none">ALX</div>
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 text-8xl font-display text-white/2 italic transition-premium hover:text-gold/8">ALX</div>
                 <div className="relative z-10">
                   <span className="text-[10px] font-mono text-white/30 uppercase tracking-widest mb-3 block">Certification</span>
                   <p className="text-sm text-white/80 font-light leading-relaxed">
-                    ALX Certified Software Engineer. Detail-obsessed. Architecture-driven.
+                    ALX Certified Software Engineer.<br/> Detail-obsessed. Architecture-driven.
                   </p>
                 </div>
               </motion.div>

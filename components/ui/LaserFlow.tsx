@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
@@ -279,8 +281,8 @@ export const LaserFlow: React.FC<Props> = ({
   dpr,
   mouseSmoothTime = 0.0,
   mouseTiltStrength = 0.01,
-  horizontalBeamOffset = 0.1,
-  verticalBeamOffset = 0.0,
+  horizontalBeamOffset = 0.6,
+  verticalBeamOffset = 1.0,
   flowSpeed = 0.35,
   verticalSizing = 2.0,
   horizontalSizing = 0.5,
@@ -560,6 +562,7 @@ export const LaserFlow: React.FC<Props> = ({
       geometry.dispose();
       material.dispose();
       renderer.dispose();
+      renderer.forceContextLoss();
       if (mount.contains(canvas)) mount.removeChild(canvas);
     };
   }, [dpr]);
