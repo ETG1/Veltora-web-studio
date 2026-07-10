@@ -27,7 +27,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="w-full py-24 relative">
+    <section id="services" className="w-full py-24 relative">
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 pointer-events-none">
         
         {/* Section Header */}

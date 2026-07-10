@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import Cursor from '@/components/ui/Cursor'
+import TargetCursor from '@/components/ui/TargetCursor'
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 
@@ -46,7 +46,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       </head>
       <body suppressHydrationWarning>
-        <Cursor />
+        <TargetCursor
+          cursorColor="#ffffff"
+          cursorColorOnTarget="#C9A230"
+          targetSelector="a, button, [role='button'], .cursor-target, .cursor-pointer"
+          spinDuration={3}
+          hoverDuration={0.18}
+          hideDefaultCursor
+          parallaxOn
+        />
         <Navbar />
         {children}
         <Footer />

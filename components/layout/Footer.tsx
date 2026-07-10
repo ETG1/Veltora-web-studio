@@ -58,27 +58,28 @@ export default function Footer() {
             <div className="space-y-8">
               <p className="font-mono text-[9px] uppercase tracking-widest text-white/20">Studio</p>
               <ul className="space-y-4 font-display text-lg text-white/60">
-                <li><a href="#" className="hover:text-gold-deep transition-colors">The Lab</a></li>
-                <li><a href="#" className="hover:text-gold-deep transition-colors">Manifesto</a></li>
-                <li><a href="#" className="hover:text-gold-deep transition-colors">Work</a></li>
-                <li><a href="#" className="hover:text-gold-deep transition-colors">Archive</a></li>
+                <li><Link href="/about#approach" className="hover:text-gold-deep transition-colors">The Approach</Link></li>
+                <li><Link href="/about#process" className="hover:text-gold-deep transition-colors">Process</Link></li>
+                <li><Link href="/#portfolio" className="hover:text-gold-deep transition-colors">Case Studies</Link></li>
+                <li><Link href="/about" className="hover:text-gold-deep transition-colors">Brand &amp; Assets</Link></li>
               </ul>
             </div>
             <div className="space-y-8">
               <p className="font-mono text-[9px] uppercase tracking-widest text-white/20">Services</p>
               <ul className="space-y-4 font-display text-lg text-white/60">
-                <li><a href="#" className="hover:text-gold-deep transition-colors">Engineering</a></li>
-                <li><a href="#" className="hover:text-gold-deep transition-colors">UI Design</a></li>
-                <li><a href="#" className="hover:text-gold-deep transition-colors">Branding</a></li>
-                <li><a href="#" className="hover:text-gold-deep transition-colors">Strategy</a></li>
+                <li><Link href="/services/web-app-development" className="hover:text-gold-deep transition-colors">Web App Dev</Link></li>
+                <li><Link href="/services/mobile-app-development" className="hover:text-gold-deep transition-colors">Mobile App Dev</Link></li>
+                <li><Link href="/services/graphic-design" className="hover:text-gold-deep transition-colors">Graphic Design</Link></li>
+                <li><Link href="/contact" className="hover:text-gold-deep transition-colors">Strategy &amp; Consultation</Link></li>
               </ul>
             </div>
             <div className="space-y-8 col-span-2 md:col-span-1">
               <p className="font-mono text-[9px] uppercase tracking-widest text-white/20">Connect</p>
               <ul className="space-y-4 font-display text-lg text-white/60">
-                <li><a href="#" className="hover:text-gold-deep transition-colors italic">Inquiry System</a></li>
+                <li><Link href="/contact" className="hover:text-gold-deep transition-colors italic">Inquiry System</Link></li>
                 <li className="text-white/30 font-light text-sm">Pretoria, South Africa</li>
-                <li className="text-white/30 font-light text-sm">+27 (0) 72 455 1290</li>
+                <li><a href="tel:+27072453100" className="text-white/30 font-light text-sm hover:text-gold-deep transition-colors">+27 (0) 72 453 1990</a></li>
+                <li><a href="mailto:hello@veltora.studio" className="text-white/30 font-light text-sm hover:text-gold-deep transition-colors">hello@veltora.studio</a></li>
               </ul>
             </div>
           </div>

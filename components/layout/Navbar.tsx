@@ -3,19 +3,16 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { NAV_LINKS } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 
 function NavLink({ href, label, isActive, onClick }: { href: string; label: string; isActive: boolean; onClick?: () => void }) {
-  const [isHovered, setIsHovered] = useState(false)
-  
   return (
     <Link
       href={href}
       onClick={onClick}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       className={cn(
         "relative font-mono text-[0.7rem] tracking-[0.18em] uppercase font-medium transition-colors duration-200",
         isActive ? "text-[#F5F5F5]" : "text-[rgba(245,245,245,0.65)] hover:text-[#F5F5F5]"
@@ -38,16 +35,32 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('')
   const isScrolling = useRef(false)
   const scrollTimeout = useRef<NodeJS.Timeout | null>(null)
+  const pathname = usePathname()
 
-  const handleNavClick = (sectionId: string) => {
+  const handleNavClick = (href: string) => {
+    // For hash links, track by section id; for path links, clear section
+    const sectionId = href.includes('#') ? href.split('#')[1] : ''
     setActiveSection(sectionId)
     setMenuOpen(false)
-    
-    isScrolling.current = true
-    if (scrollTimeout.current) clearTimeout(scrollTimeout.current)
-    scrollTimeout.current = setTimeout(() => {
-      isScrolling.current = false
-    }, 1000)
+
+    if (sectionId) {
+      isScrolling.current = true
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current)
+      scrollTimeout.current = setTimeout(() => {
+        isScrolling.current = false
+      }, 1000)
+    }
+  }
+
+  // Determine active state per link
+  const isLinkActive = (href: string): boolean => {
+    if (href.startsWith('/#') || href === '/') {
+      // Hash-anchor on homepage: use IntersectionObserver result
+      const sectionId = href.split('#')[1]
+      return activeSection === sectionId
+    }
+    // Path-based links: match current pathname
+    return pathname === href || pathname.startsWith(href + '/')
   }
 
   const handleLogoClick = (e: React.MouseEvent) => {
@@ -66,9 +79,9 @@ export default function Navbar() {
   }
 
   useEffect(() => {
-    const sectionIds = NAV_LINKS
-      .map(link => link.href.split('#')[1])
-      .filter(Boolean)
+    // Only watch hash-based links on the homepage
+    const hashLinks = NAV_LINKS.filter(l => l.href.startsWith('/#'))
+    const sectionIds = hashLinks.map(l => l.href.split('#')[1]).filter(Boolean)
 
     const observers: IntersectionObserver[] = []
 
@@ -131,42 +144,32 @@ export default function Navbar() {
     >
         <div className="h-16 w-full px-6 sm:px-4 md:px-6 flex items-center justify-between relative min-w-0">
         {/* Zone 1 — Logo */}
-        <Link href="/" className="relative flex items-center gap-1.5 sm:gap-2.5 group shrink-0 min-w-0" onClick={handleLogoClick}>
-          <Image
-            src="/icon.svg"
-            alt="Veltora"
-            width={120}
-            height={40}
-            className="h-9 sm:h-11.25 w-auto max-w-22.5 sm:max-w-none"
-            priority
-          />
-          <span className="hidden sm:block absolute sm:ml-7 text-2xl sm:text-3xl font-display text-white font-light whitespace-nowrap">eltora</span>
+        <Link href="/" className="relative flex items-center gap-2 group shrink-0 min-w-0" onClick={handleLogoClick}>
+          <span className="font-display text-2xl sm:text-3xl tracking-[0.2em] font-light text-white uppercase">
+            <span className="text-gold-deep">V</span>eltora
+          </span>
         </Link>
 
         {/* Zone 2 — Nav links (Desktop) */}
         <nav className="hidden lg:flex items-center gap-9 absolute left-1/2 -translate-x-1/2">
-          {NAV_LINKS.map((link) => {
-            const sectionId = link.href.split('#')[1]
-            return (
-              <NavLink
-                key={link.href}
-                href={link.href}
-                label={link.label}
-                isActive={activeSection === sectionId}
-                onClick={() => handleNavClick(sectionId)}
-              />
-            )
-          })}
+          {NAV_LINKS.map((link) => (
+            <NavLink
+              key={link.href}
+              href={link.href}
+              label={link.label}
+              isActive={isLinkActive(link.href)}
+              onClick={() => handleNavClick(link.href)}
+            />
+          ))}
         </nav>
 
         {/* Zone 3 — CTA + hamburger */}
         <div className="shrink-0 flex items-center gap-2 sm:gap-4">
           <Link
-            href="/#contact"
-            className="hidden lg:inline-flex bg-transparent border border-[rgba(232,160,32,0.18)] text-gold hover:bg-gold hover:text-dark font-medium font-mono text-[0.68rem] tracking-[0.15em] uppercase px-5 py-2.5 rounded-full items-center gap-2 transition-all duration-400 "
+            href="/contact"
+            className="hidden lg:inline-flex bg-transparent border border-[rgba(232,160,32,0.18)] text-gold hover:bg-gold hover:text-dark font-medium font-mono text-[0.68rem] tracking-[0.15em] uppercase px-5 py-2.5 rounded-full items-center gap-2 transition-all duration-400"
           >
             START PROJECT
-            
           </Link>
 
           {/* Hamburger */}
@@ -205,31 +208,26 @@ export default function Navbar() {
           >
             <div className="pt-4 pb-6 px-3 sm:px-4 flex flex-col min-w-0">
               <ul className="flex flex-col mb-4 min-w-0">
-                {NAV_LINKS.map((link, i) => {
-                  const sectionId = link.href.split('#')[1]
-                  const isActive = activeSection === sectionId
-
-                  return (
-                    <motion.li
-                      key={link.href}
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ delay: 0.05 + i * 0.03 }}
+                {NAV_LINKS.map((link, i) => (
+                  <motion.li
+                    key={link.href}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ delay: 0.05 + i * 0.03 }}
+                  >
+                    <Link
+                      href={link.href}
+                      onClick={() => handleNavClick(link.href)}
+                      className={cn(
+                        "block py-3 font-mono text-[0.75rem] sm:text-[0.85rem] tracking-[0.18em] uppercase font-medium transition-colors duration-200 truncate",
+                        isLinkActive(link.href) ? "text-[#F5F5F5]" : "text-[rgba(245,245,245,0.65)] hover:text-[#F5F5F5]"
+                      )}
                     >
-                      <Link
-                        href={link.href}
-                        onClick={() => handleNavClick(sectionId)}
-                        className={cn(
-                          "block py-3 font-mono text-[0.75rem] sm:text-[0.85rem] tracking-[0.18em] uppercase font-medium transition-colors duration-200 truncate",
-                          isActive ? "text-[#F5F5F5]" : "text-[rgba(245,245,245,0.65)] hover:text-[#F5F5F5]"
-                        )}
-                      >
-                        {link.label}
-                      </Link>
-                    </motion.li>
-                  )
-                })}
+                      {link.label}
+                    </Link>
+                  </motion.li>
+                ))}
               </ul>
 
               <motion.div
@@ -240,7 +238,7 @@ export default function Navbar() {
                 className="w-full min-w-0"
               >
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   onClick={() => setMenuOpen(false)}
                   className="flex w-full justify-center bg-gold hover:bg-gold-deep text-dark font-medium font-mono text-[0.65rem] sm:text-[0.68rem] tracking-[0.15em] uppercase px-4 sm:px-5 py-2.5 rounded-full items-center gap-2 transition-colors duration-200 shrink-0"
                 >

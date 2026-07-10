@@ -91,32 +91,39 @@ const CircularText: React.FC<CircularTextProps> = ({
   };
 
   return (
-    <motion.div
-      className={`m-0 mx-auto rounded-full w-[200px] h-[200px] relative font-black text-white text-center cursor-pointer origin-center ${className}`}
-      style={{ rotate: rotation }}
-      initial={{ rotate: 0 }}
-      animate={controls}
+    <div
+      className={`relative m-0 mx-auto rounded-full w-[200px] h-[200px] flex items-center justify-center cursor-pointer origin-center ${className}`}
       onMouseEnter={handleHoverStart}
       onMouseLeave={handleHoverEnd}
     >
-      {letters.map((letter, i) => {
-        const rotationDeg = (360 / letters.length) * i;
-        const factor = Math.PI / letters.length;
-        const x = factor * i;
-        const y = factor * i;
-        const transform = `rotateZ(${rotationDeg}deg) translate3d(${x}px, ${y}px, 0)`;
+      <motion.div
+        className="absolute inset-0 font-black text-white text-center origin-center"
+        style={{ rotate: rotation }}
+        initial={{ rotate: 0 }}
+        animate={controls}
+      >
+        {letters.map((letter, i) => {
+          const rotationDeg = (360 / letters.length) * i;
+          const factor = Math.PI / letters.length;
+          const x = factor * i;
+          const y = factor * i;
+          const transform = `rotateZ(${rotationDeg}deg) translate3d(${x}px, ${y}px, 0)`;
 
-        return (
-          <span
-            key={i}
-            className="absolute inline-block inset-0 text-sm uppercase tracking-widest transition-all duration-500 ease-[cubic-bezier(0,0,0,1)]"
-            style={{ transform, WebkitTransform: transform }}
-          >
-            {letter}
-          </span>
-        );
-      })}
-    </motion.div>
+          return (
+            <span
+              key={i}
+              className="absolute inline-block inset-0 text-sm uppercase tracking-widest transition-all duration-500 ease-[cubic-bezier(0,0,0,1)]"
+              style={{ transform, WebkitTransform: transform }}
+            >
+              {letter}
+            </span>
+          );
+        })}
+      </motion.div>
+      <div className="absolute z-10 flex items-center justify-center pointer-events-none drop-shadow-[0_0_15px_rgba(232,160,32,0.4)]">
+        <img src="/icon.svg" alt="Icon" className="w-24 h-24 object-contain" />
+      </div>
+    </div>
   );
 };
 

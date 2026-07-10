@@ -25,7 +25,7 @@ export default function GraphicDesignPage() {
 
       {/* A. Hero Section */}
       <div className="w-full px-4 md:px-8 pt-24 md:pt-32 pb-12 md:pb-24 relative z-10">
-        <div className="relative w-full h-[50vh] overflow-hidden bg-black rounded-[2.5rem] border border-white/5">
+        <div className="relative w-full h-[50vh] overflow-hidden bg-black rounded-[2.5rem] border border-white/8">
         {/* Background Image */}
         <img 
           src="/graphic-design-portfolio.jpeg" 
@@ -34,7 +34,7 @@ export default function GraphicDesignPage() {
         />
 
         {/* Dark Overlay for content readability */}
-        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/60 pointer-events-none" />
 
         {/* Content Overlay */}
         <div className="relative z-10 h-full flex flex-col justify-center items-start px-6 md:px-16 max-w-7xl mx-auto pt-20">
@@ -53,12 +53,6 @@ export default function GraphicDesignPage() {
                   </Link>
                 </li>
                 <li className="text-gray-500">/</li>
-                <li>
-                  <Link href="/services" className="text-gray-400 hover:text-[#C9A230] transition">
-                    Services
-                  </Link>
-                </li>
-                <li className="text-gray-500">/</li>
                 <li className="text-white">
                   Graphic Design
                 </li>
@@ -66,8 +60,8 @@ export default function GraphicDesignPage() {
             </nav>
 
             {/* Title */}
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              Graphic Design
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 leading-tight">
+              Graphic <span className="italic gold-text drop-shadow-2xl">Design</span>
             </h1>
 
             {/* Subtitle */}

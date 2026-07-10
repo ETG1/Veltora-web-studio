@@ -281,7 +281,7 @@ export default function FeaturedProjects() {
 
   return (
     <section
-      id="work"
+      id="portfolio"
       className="w-full py-24 md:py-32 px-4 md:px-8 border-t border-white/5 relative"
     >
       <div className="max-w-7xl mx-auto relative z-10">

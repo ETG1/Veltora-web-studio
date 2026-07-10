@@ -31,19 +31,49 @@ type SubmitStatus = 'idle' | 'loading' | 'success' | 'error'
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
-const SERVICES = [
-  'Web App Development',
-  'Mobile App Development',
-  'Graphic Design',
+const SERVICES: { label: string; value: string }[] = [
+  { label: 'Web App Development',    value: 'web-app'        },
+  { label: 'Mobile App Development', value: 'mobile-app'    },
+  { label: 'Graphic Design',         value: 'graphic-design' },
 ]
 
-const BUDGETS = [
-  'R3,500 – R10,000',
-  'R10,000 – R25,000',
-  'R25,000 – R50,000',
-  'R50,000+',
-  'Not Sure',
-]
+interface BudgetOption {
+  label: string
+  value: string
+  tier?: string
+  package?: string
+  description: string
+}
+
+const BUDGET_OPTIONS: Record<string, { fieldLabel: string; options: BudgetOption[] }> = {
+  'web-app': {
+    fieldLabel: 'Budget Range',
+    options: [
+      { label: 'R5,000 – R10,000',  value: '5k-10k',  description: 'Entry-level web applications' },
+      { label: 'R10,000 – R25,000', value: '10k-25k', description: 'Professional web apps' },
+      { label: 'R25,000 – R50,000', value: '25k-50k', description: 'Complex, feature-rich applications' },
+      { label: 'R50,000+',          value: '50k+',    description: 'Enterprise-scale solutions' },
+    ],
+  },
+  'mobile-app': {
+    fieldLabel: 'Package Tier',
+    options: [
+      { label: 'R4,000 – R10,000',  value: 'mvp',          tier: 'MVP',              description: '2–3 core features, single platform (iOS or Android), basic UI/UX' },
+      { label: 'R10,000 – R25,000', value: 'professional',  tier: 'Professional App', description: 'Full-featured iOS + Android, backend integration, polished UX' },
+      { label: 'R25,000 – R50,000', value: 'enterprise',    tier: 'Enterprise Scale', description: 'Cross-platform, advanced features, premium design, ongoing support' },
+      { label: 'R50,000+',          value: 'custom-mobile', tier: 'Custom',           description: "Let's discuss your specific needs" },
+    ],
+  },
+  'graphic-design': {
+    fieldLabel: 'Package',
+    options: [
+      { label: 'R100+',   value: 'logo',          package: 'Logo Design',                       description: 'Custom logo design with basic revisions' },
+      { label: 'R150+',   value: 'poster',        package: 'Poster Design',                     description: 'Custom poster or promotional material' },
+      { label: 'R1,000+', value: 'brand',         package: 'Brand Identity System',             description: 'Complete brand system — logo, colours, typography, and guidelines' },
+      { label: 'Custom',  value: 'custom-design', package: 'Multiple Items / Complex Project', description: "Let's discuss your project scope" },
+    ],
+  },
+}
 
 const STORAGE_KEY = 'veltora_form_draft'
 
@@ -224,13 +254,12 @@ export default function ProjectTransmission() {
             Let&apos;s Build <br />
             <span className="italic gold-text drop-shadow-2xl">Your Competitive Advantage.</span>
           </h2>
-          <p className="text-white/40 text-xl font-light leading-relaxed mb-16 max-w-md">
-            We&apos;re currently accepting high-fidelity projects. Reach out to start a
-            discovery session and define your digital architecture.
+          <p className="text-white/40 text-xl font-light leading-relaxed mb-16 max-w-md">Tell us about your project we, work with founders and ambitious brands building fast. 
+Let's discuss your vision and define the next step.
           </p>
           <div className="space-y-6 border-l border-gold-deep/20 pl-8">
-            <div>
-              <p className="font-mono text-[9px] uppercase tracking-widest text-white/20 mb-2">
+            {/* <div>
+              <p className="font-mono text-[9px] uppercase tracking-widest text-white/40 mb-2">
                 Direct Channel
               </p>
               <a
@@ -239,9 +268,9 @@ export default function ProjectTransmission() {
               >
                 hello@veltora.studio
               </a>
-            </div>
+            </div> */}
             <div>
-              <p className="font-mono text-[9px] uppercase tracking-widest text-white/20 mb-2">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-white/40 mb-2">
                 Availability
               </p>
               <p className="text-white/60 text-sm font-light">
@@ -366,7 +395,10 @@ export default function ProjectTransmission() {
                           form.service ? 'text-gold' : 'text-[#555]'
                         }`}
                         value={form.service}
-                        onChange={(e) => set('service', e.target.value)}
+                        onChange={(e) => {
+                          set('service', e.target.value)
+                          set('budget', '') // reset when service changes
+                        }}
                         onBlur={() => touch('service')}
                         required
                       >
@@ -374,8 +406,8 @@ export default function ProjectTransmission() {
                           Select a service...
                         </option>
                         {SERVICES.map((s) => (
-                          <option key={s} value={s} className="bg-[#111] text-white">
-                            {s}
+                          <option key={s.value} value={s.value} className="bg-[#111] text-white">
+                            {s.label}
                           </option>
                         ))}
                       </select>
@@ -383,33 +415,71 @@ export default function ProjectTransmission() {
                     </div>
                     <FieldError message={errors.service} />
                   </div>
-                  <div>
-                    <FieldLabel>Budget Range</FieldLabel>
-                    <div className="relative">
-                      <select
-                        id="budget"
-                        className={`${inputBase} appearance-none cursor-pointer ${
-                          form.budget ? 'text-gold' : 'text-[#555]'
-                        }`}
-                        value={form.budget}
-                        onChange={(e) => set('budget', e.target.value)}
-                        onBlur={() => touch('budget')}
-                        required
-                      >
-                        <option value="" className="bg-[#111] text-[#555]">
-                          Select a range...
-                        </option>
-                        {BUDGETS.map((b) => (
-                          <option key={b} value={b} className="bg-[#111] text-white">
-                            {b}
-                          </option>
-                        ))}
-                      </select>
-                      <ChevronIcon />
-                    </div>
-                    <FieldError message={errors.budget} />
-                  </div>
+                  {/* ── Budget / Package (dynamic) ── */}
+                  {(() => {
+                    const serviceData = BUDGET_OPTIONS[form.service]
+                    const budgetOptions = serviceData?.options ?? []
+                    const fieldLabel   = serviceData?.fieldLabel ?? 'Budget / Package'
+                    const isDisabled   = !form.service
+                    return (
+                      <div>
+                        <FieldLabel>
+                          {fieldLabel}
+                        </FieldLabel>
+                        <div className="relative">
+                          <select
+                            id="budget"
+                            disabled={isDisabled}
+                            className={`${inputBase} appearance-none cursor-pointer ${
+                              form.budget ? 'text-gold' : 'text-[#555]'
+                            } disabled:opacity-40 disabled:cursor-not-allowed`}
+                            value={form.budget}
+                            onChange={(e) => set('budget', e.target.value)}
+                            onBlur={() => touch('budget')}
+                            required
+                          >
+                            <option value="" className="bg-[#111] text-[#555]">
+                              {isDisabled ? 'Select a service first' : 'Select budget / package...'}
+                            </option>
+                            {budgetOptions.map((opt) => (
+                              <option key={opt.value} value={opt.value} className="bg-[#111] text-white">
+                                {opt.label}{opt.tier ? ` — ${opt.tier}` : ''}{opt.package ? ` — ${opt.package}` : ''}
+                              </option>
+                            ))}
+                          </select>
+                          <ChevronIcon />
+                        </div>
+                        <FieldError message={errors.budget} />
+                      </div>
+                    )
+                  })()}
                 </div>
+
+                {/* ── Budget description reveal ── */}
+                <AnimatePresence>
+                  {form.budget && form.service && (() => {
+                    const opt = BUDGET_OPTIONS[form.service]?.options.find(o => o.value === form.budget)
+                    return opt ? (
+                      <motion.div
+                        key={form.budget}
+                        initial={{ opacity: 0, y: -6, height: 0 }}
+                        animate={{ opacity: 1, y: 0, height: 'auto' }}
+                        exit={{ opacity: 0, y: -4, height: 0 }}
+                        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                        className="overflow-hidden"
+                      >
+                        <div className="flex items-start gap-3 px-4 py-3.5 rounded-lg bg-[rgba(201,162,48,0.06)] border border-[rgba(201,162,48,0.14)]">
+                          <svg className="w-3.5 h-3.5 text-gold/60 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          <p className="font-light text-[0.78rem] text-white/55 leading-relaxed">
+                            {opt.description}
+                          </p>
+                        </div>
+                      </motion.div>
+                    ) : null
+                  })()}
+                </AnimatePresence>
 
                 {/* ── Row 3: Timeline ── */}
                 <div>

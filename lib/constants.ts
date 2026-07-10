@@ -144,9 +144,8 @@ export const testimonials = [
 ]
 
 export const NAV_LINKS = [
-  { label: 'About', href: '/#about' },
-  { label: 'Portfolio', href: '/#work' },
-  { label: 'Process',   href: '/#process' },
   { label: 'Services',  href: '/#services' },
+  { label: 'Portfolio', href: '/#portfolio' },
+  { label: 'About',     href: '/about' },
 ]
 

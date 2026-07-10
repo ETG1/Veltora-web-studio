@@ -53,12 +53,6 @@ export default function MobileAppDevelopmentPage() {
                   </Link>
                 </li>
                 <li className="text-gray-500">/</li>
-                <li>
-                  <Link href="/services" className="text-gray-400 hover:text-[#C9A230] transition">
-                    Services
-                  </Link>
-                </li>
-                <li className="text-gray-500">/</li>
                 <li className="text-white">
                   Mobile App Development
                 </li>
@@ -66,8 +60,8 @@ export default function MobileAppDevelopmentPage() {
             </nav>
 
             {/* Title */}
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              Mobile App Development
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 leading-tight">
+              Mobile App <span className="italic gold-text drop-shadow-2xl">Development</span>
             </h1>
 
             {/* Subtitle */}
