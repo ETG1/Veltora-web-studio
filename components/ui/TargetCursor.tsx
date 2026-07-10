@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef, useCallback, useMemo, useState } from 'react';
+import React, { useEffect, useRef, useCallback, useMemo } from 'react';
 import { gsap } from 'gsap';
 
 export interface TargetCursorProps {
@@ -27,15 +27,10 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
   const spinTl = useRef<gsap.core.Timeline | null>(null);
   const dotRef = useRef<HTMLDivElement>(null);
 
-  const [mounted, setMounted] = useState(false);
   const isActiveRef = useRef(false);
   const targetCornerPositionsRef = useRef<{ x: number; y: number }[] | null>(null);
   const tickerFnRef = useRef<(() => void) | null>(null);
   const activeStrengthRef = useRef({ current: 0 });
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const isMobile = useMemo(() => {
     if (typeof window === 'undefined') return false;
@@ -327,7 +322,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     cursorColorOnTarget
   ]);
 
-  if (isMobile || !mounted) {
+  if (isMobile) {
     return null;
   }
 

@@ -429,7 +429,7 @@ Let's discuss your vision and define the next step.
                         <div className="relative">
                           <select
                             id="budget"
-                            disabled={isDisabled}
+                            disabled={!form.service}
                             className={`${inputBase} appearance-none cursor-pointer ${
                               form.budget ? 'text-gold' : 'text-[#555]'
                             } disabled:opacity-40 disabled:cursor-not-allowed`}

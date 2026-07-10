@@ -308,7 +308,7 @@ export default function AboutPage() {
                   Veltora exists to close that gap. I started this studio because I believed one person — if focused and skilled across the full stack — could deliver better results than a bloated team. No committees. No delays. No feature creep disguised as "additional value."
                 </p>
                 <p>
-                  The name, Veltora, references the tiger ("tora" in Japanese). Not because I'm trying to sound cool, but because I wanted to embody what tigers actually represent: <strong className="text-white font-normal">precision, speed, and the discipline to only do what matters.</strong>
+                  The name, Veltora, references the tiger ("tora" in Japanese). Not because I'm trying to sound cool, but because I wanted to embody what tigers actually represent: <strong className="text-gold font-normal">precision, speed, and the discipline to only do what matters.</strong>
                 </p>
               </div>
             </div>
