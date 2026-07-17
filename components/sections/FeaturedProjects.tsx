@@ -27,7 +27,7 @@ const projects: Project[] = [
     image: '/lm-motors-full.png',
     description:
       'Custom admin dashboard for vehicle inventory management, sales tracking, and dealership operations.',
-    tools: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase', 'React'],
+    tools: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     link: 'https://lm-motors.vercel.app/',
     image_full: '/lm-motors-full.png',
   },
@@ -37,8 +37,8 @@ const projects: Project[] = [
     category: 'Web',
     image: '/takalani-day-care-center.png',
     description:
-      'Website for childcare facility with enrollment information, curriculum details, and contact management.',
-    tools: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript'],
+      'Full-stack childcare management platform parent and admin portals with real-time enrollment, attendance, messaging, and payments, built with production-grade security hardening.',
+    tools: ['Next.js', 'Supabase', 'Tailwind CSS', 'TypeScript'],
     link: 'https://takalani-day-care-center.vercel.app/',
     image_full: '/takalani-day-care-center.png',
   },
@@ -48,8 +48,8 @@ const projects: Project[] = [
     category: 'Web',
     image: '/eagle-air-thumbnail.png',
     description:
-      'Flight training school website with course catalog, instructor profiles, and booking system.',
-    tools: ['Next.js', 'React', 'Supabase', 'Tailwind CSS'],
+      'Flight training school website with course catalog.',
+    tools: ['Next.js', 'Tailwind CSS'],
     link: 'https://eagle-air-flight-school.vercel.app/',
     image_full: '/eagle-air-thumbnail.png',
   },
@@ -60,7 +60,7 @@ const projects: Project[] = [
     image: '/aristocraft-thumbnail.png',
     description:
       'Luxury artisan marketplace showcasing handcrafted products with advanced filtering and checkout.',
-    tools: ['Next.js', 'TypeScript', 'Stripe', 'Tailwind CSS', 'Supabase'],
+    tools: ['Next.js', 'TypeScript', 'Tailwind CSS',],
     link: 'https://aristocraft.vercel.app/',
     image_full: '/Aristocraft.png',
   },
@@ -71,7 +71,7 @@ const projects: Project[] = [
     image: '/mobile-app-mockups.jpeg',
     description:
       'Creative agency portfolio site showcasing case studies, services, and client work.',
-    tools: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion'],
+    tools: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
     link: 'https://togb-agency.vercel.app/',
     image_full: '/mobile-app-mockups.jpeg',
   },
@@ -82,7 +82,7 @@ const projects: Project[] = [
     image: '/Hotel.png',
     description:
       'Boutique hotel website with room booking, photo gallery, and reservation management.',
-    tools: ['Next.js', 'React', 'Supabase', 'Tailwind CSS', 'TypeScript'],
+    tools: ['Next.js','Tailwind CSS', 'JavaScript'],
     link: 'https://hotel-nine-omega.vercel.app/',
     image_full: '/Hotel.png',
   },
