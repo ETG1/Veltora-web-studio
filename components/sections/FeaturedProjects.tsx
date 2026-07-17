@@ -68,12 +68,12 @@ const projects: Project[] = [
     id: 5,
     title: 'TOGB Agency',
     category: 'Web',
-    image: '/mobile-app-mockups.jpeg',
+    image: '/togb.png',
     description:
       'Creative agency portfolio site showcasing case studies, services, and client work.',
     tools: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
     link: 'https://togb-agency.vercel.app/',
-    image_full: '/mobile-app-mockups.jpeg',
+    image_full: '/togb.png',
   },
   {
     id: 6,
